@@ -1,0 +1,13 @@
+{
+    "node-red": {
+        "settings": {
+            "flowFile": "everHome2MQTT.json",
+            "credentialsFile": "everHome2MQTT_cred.json"
+        }
+    },
+    "dependencies": {
+        "node-red-contrib-home-assistant-websocket": "0.73.0",
+        "node-red-contrib-ip": "1.0.1",
+        "node-red-contrib-oauth2": "6.2.1"
+    }
+}

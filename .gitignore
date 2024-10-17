@@ -1,0 +1,2 @@
+# Ignore all JSON files with 'cred' in their name
+*cred.json
