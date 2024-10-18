@@ -25,7 +25,7 @@ Currently, Home Assistant does not offer native integration for the **everHome C
 To operate **everHome2MQTT**, the following add-ons must be installed:
 - **Mosquitto Broker** (or an alternative)
 - **Node-RED**
-- **File Editor** (or an alternative for editing the `config.yaml` of everHome2MQTT)
+- **File Editor** (or an alternative for editing the `config.yaml` of everHome2MQTT) [Documentation for config.yaml](docs\Config.yaml\README.en.md)
 
 ### Note:
 The software accesses the `homeassistant` directory, which is typically available in the Node-RED add-on. If Node-RED is not directly installed in **Home Assistant**, ensure that the `homeassistant` directory is accessible and has the appropriate read and write permissions.
