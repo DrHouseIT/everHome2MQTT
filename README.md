@@ -1,6 +1,6 @@
 # everHome2MQTT
 
-Welcome to **everHome2MQTT**! This software solution enables the integration of the **everHome Cloud** into **Home Assistant**.
+Welcome to **everHome2MQTT**! This software solution enables the integration of the **everHome Cloud** into **Home Assistant**. For more information, visit the [everHome website](https://everhome.cloud) and the [Home Assistant website](https://www.home-assistant.io).
 
 ## Multilingual Documentation
 
