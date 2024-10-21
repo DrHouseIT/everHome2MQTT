@@ -7890,7 +7890,7 @@
         "z": "95278f532bb93da2",
         "g": "b2f04ce1015743c7",
         "name": "Split Devices",
-        "func": "var gateways = [];\nvar otherDevices = [];\n\nfor (var i = 0; i < msg.devices.length; i++) {\n    var device = msg.devices[i];\n\n    if (device.subtype === \"gateway\") {\n        gateways.push(device);\n    } else {\n        otherDevices.push(device);\n    }\n}\n\nmsg.gateways = gateways;\nmsg.otherDevices = otherDevices;\n\nreturn msg;",
+        "func": "var gateways = [];\nvar otherDevices = [];\n\nfor (var i = 0; i < msg.devices.length; i++) {\n    var device = msg.devices[i];\n\n    // EcoTracker (product ID 414) is also a gateway\n    if (device.subtype === \"gateway\"|| device.productid === 414) {\n        gateways.push(device);\n    } else {\n        otherDevices.push(device);\n    }\n}\n\nmsg.gateways = gateways;\nmsg.otherDevices = otherDevices;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
