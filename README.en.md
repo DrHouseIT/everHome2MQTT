@@ -63,14 +63,29 @@ To install the required modules, proceed as follows:
 
 The modules will now be downloaded and installed in Node-RED.
 
-#### 2. Import Flows  
-To import the flow `everHome2MQTT.json`, follow these steps:
+### 2. Importing Flows
 
-- Click on the **hamburger menu** (three horizontal lines) in the top right corner.
-- Select **Import**.
-- In the following window, you can either upload the `everHome2MQTT.json` file directly or manually paste the content of the file.
-  - Select the `everHome2MQTT.json` file and click **Import**.
-- The flow will now be loaded into the user interface and can be used.
+If this is not an initial installation scenario but an update, the old flows should be deleted beforehand. Please note that at least one flow must always be present. Therefore, if you want to delete all **everHome2MQTT** flows, you must create another flow first.
+
+#### Deleting Old Flows (Update Scenario)
+
+To delete old flows, follow these steps:
+
+- Select the desired flow.
+- Right-click and choose **Delete** from the context menu.
+- Optionally, you can create an empty flow with the plus button to delete all other flows.
+
+#### Importing Flows
+
+To import the flow file `everHome2MQTT.json`, follow these steps:
+
+- Click on the **hamburger menu** in the top right corner.
+- Select **Import** from the dropdown menu.
+- In the following window, you can either upload the `everHome2MQTT.json` file directly or manually paste the content of the file:
+  - Click on **Select File**, find the `everHome2MQTT.json` file, and choose it.
+  - Then click on **Import**.
+- The flow will now be loaded into the user interface and will be ready for use.
+
 
 #### 3. Set Up MQTT Nodes  
 - In the "everHome2MQTT Control" tab, click on any **MQTT node** (purple color) and edit the **server** via the pencil icon.
