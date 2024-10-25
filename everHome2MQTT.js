@@ -1,6 +1,6 @@
 const express = require('express');
 const {
-   AuthorizationCode
+    AuthorizationCode
 } = require('simple-oauth2');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -10,74 +10,124 @@ const axios = require('axios');
 const app = express();
 const hostname = "0.0.0.0";
 
-const args = process.argv.slice(2);
+const filePath = '/homeassistant/everHome2MQTT/server/data/';
 
-if (args.length !== 1 && args.length !== 2 && args.length !== 3) {
-   console.error('Please enter either a file path or a URL, and optionally a restart URL and a serve port.');
-   process.exit(1);
+let filePathIsValid = false;
+try {
+    filePathIsValid = fs.existsSync(filePath);
+} catch (err) {
+    filePathIsValid = false;
 }
 
-const filePath = args[0];
-const restartUrl = args[1];
-const port = args[2];
+if (!filePathIsValid) {
+    console.error(`Invalid file path: ${filePath}`);
+    console.log('The process (server) is being terminated due to invalid file path.');
+    process.exit(3);
+}
 
 const logFilePath = filePath + 'server.log';
-
-
-function writeToLogFile(message) {
-   const timestamp = new Date().toISOString();
-   const logMessage = `[${timestamp}] ${message}\n`;
-   fs.appendFile(logFilePath, logMessage, (err) => {
-      if (err) {
-         console.error('Error writing to log file:', err);
-      }
-   });
-}
-
+const tokenDataFilePath = filePath + 'token_data.json';
+const messageHistoryFilePath = filePath + 'message_history.json';
+const wsTimesFilePath = filePath + 'wstimes.json';
 
 const originalConsoleLog = console.log;
-console.log = function(message) {
-   writeToLogFile(message);
-   originalConsoleLog.apply(console, arguments);
+console.log = function (message) {
+    writeToLogFile(message);
+    originalConsoleLog.apply(console, arguments);
 };
 
 const originalConsoleError = console.error;
-console.error = function(message) {
-   writeToLogFile('ERROR: ' + message);
-   originalConsoleError.apply(console, arguments);
+console.error = function (message) {
+    writeToLogFile('ERROR: ' + message);
+    originalConsoleError.apply(console, arguments);
 };
 
+process.on('uncaughtException', (error) => {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ERROR: Uncaught Exception: ${error.stack || error.message}`;
+    console.error(logMessage);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ERROR: Unhandled Rejection at: ${promise} reason: ${reason.stack || reason}`;
+    console.error(logMessage);
+});
+
+const args = process.argv.slice(2);
+
+if (args.length !== 2) {
+    console.error('Please provide the following parameters in this order: restart-url, and server port.');
+    console.log('The process (server) is being terminated due to missing parameters.');
+    process.exit(2);
+}
+
+const restartUrl = args[0];
+const port = args[1];
+
+let urlIsValid = false;
+try {
+    new URL(restartUrl);
+    urlIsValid = true;
+} catch (err) {
+    urlIsValid = false;
+}
+
+if (!urlIsValid) {
+    console.error(`Invalid restart-url: ${restartUrl}`);
+    console.log('The process (server) is being terminated due to invalid restart-url.');
+    process.exit(3);
+}
+
+const portNumber = parseInt(port, 10);
+if (isNaN(portNumber) || portNumber <= 0 || portNumber > 65535) {
+    console.error(`Invalid Port: ${port}`);
+    process.exit(3);
+}
+
+console.log(`Attempting to start the server on port ${portNumber}...`);
+
+function writeToLogFile(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    fs.appendFileSync(logFilePath, logMessage, (err) => {
+        if (err) {
+            console.error('Error writing to log file:', err);
+        }
+    });
+}
+
 function formatDateTime(dateTime) {
-   const date = new Date(dateTime);
+    const date = new Date(dateTime);
 
-   const month = date.getMonth() + 1;
-   const day = date.getDate();
-   const year = date.getFullYear();
-   let hours = date.getHours();
-   const minutes = date.getMinutes();
-   const seconds = date.getSeconds();
-   const ampm = hours >= 12 ? 'PM' : 'AM';
-   hours = hours % 12 || 12;
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+    let hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
 
-   return `${month}/${day}/${year}, ${hours}:${minutes}:${seconds} ${ampm}`;
+    return `${month}/${day}/${year}, ${hours}:${minutes}:${seconds} ${ampm}`;
 }
 
 function formatKeepAliveTime(lastKeepAliveTime) {
-   const now = new Date();
-   const lastKeepAlive = new Date(lastKeepAliveTime);
-   const difference = now - lastKeepAlive;
+    const now = new Date();
+    const lastKeepAlive = new Date(lastKeepAliveTime);
+    const difference = now - lastKeepAlive;
 
-   const hours = Math.floor(difference / (1000 * 60 * 60));
-   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-   const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const hours = Math.floor(difference / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-   const formattedTime = `${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+    const formattedTime = `${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
 
-   return formattedTime;
+    return formattedTime;
 }
 
 app.use(bodyParser.urlencoded({
-   extended: true
+    extended: true
 }));
 app.use(bodyParser.json());
 
@@ -93,79 +143,69 @@ let wsTimes = [];
 let messageHistory = [];
 
 
-const tokenDataFilePath = filePath + 'token_data.json';
-
-
 function readTokenDataFromFile() {
-   try {
-      const tokenData = fs.readFileSync(tokenDataFilePath, 'utf8');
-      return JSON.parse(tokenData);
-   } catch (error) {
-      console.error('Error reading token data from file:', error);
-      return [];
-   }
+    try {
+        const tokenData = fs.readFileSync(tokenDataFilePath, 'utf8');
+        return JSON.parse(tokenData);
+    } catch (error) {
+        console.error('Error reading the token data file.');
+        return [];
+    }
 }
 
 function writeTokenDataToFile(tokenData) {
-   fs.writeFile(tokenDataFilePath, JSON.stringify(tokenData), (err) => {
-      if (err) {
-         console.error('Error writing token data to file:', err);
-      }
-   });
+    fs.writeFile(tokenDataFilePath, JSON.stringify(tokenData), (err) => {
+        if (err) {
+            console.error('Error writing token data to file:', err);
+        }
+    });
 }
 
-
-const messageHistoryFilePath = filePath + 'message_history.json';
-
-
 function readMessageHistoryFromFile() {
-   try {
-      const data = fs.readFileSync(messageHistoryFilePath, 'utf8');
-      return JSON.parse(data);
-   } catch (error) {
-      console.error('Error reading message history data from file:', error);
-      return [];
-   }
+    try {
+        const data = fs.readFileSync(messageHistoryFilePath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Error reading the history data file.');
+        return [];
+    }
 }
 
 function writeMessageHistoryToFile() {
-   fs.writeFile(messageHistoryFilePath, JSON.stringify(messageHistory), (err) => {
-      if (err) {
-         console.error('Error writing message history data to file:', err);
-      }
-   });
+    fs.writeFile(messageHistoryFilePath, JSON.stringify(messageHistory), (err) => {
+        if (err) {
+            console.error('Error writing message history data to file:', err);
+        }
+    });
 }
 
-
-const wsTimesFilePath = filePath + 'wstimes.json';
-
 function writeWsTimesToFile(wsTimes) {
-   fs.writeFile(wsTimesFilePath, JSON.stringify(wsTimes), (err) => {
-      if (err) {
-         console.error('Error writing wsTimes data to file:', err);
-      }
-   });
+    fs.writeFile(wsTimesFilePath, JSON.stringify(wsTimes), (err) => {
+        if (err) {
+            console.error('Error writing wsTimes data to file:', err);
+        }
+    });
 }
 
 function readWsTimesFromFile() {
-   try {
-      const data = fs.readFileSync(wsTimesFilePath, 'utf8');
-      return JSON.parse(data);
-   } catch (error) {
-      console.error('Error reading wsTimes data from file:', error);
-      return [];
-   }
+    try {
+        const data = fs.readFileSync(wsTimesFilePath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Error reading the websocket status data file.');
+        return [];
+    }
 }
 
 function addToTimeArray(array, time, event) {
-   array.unshift({
-      time: time,
-      event: event
-   });
-   if (array.length > 20) {
-      array.pop();
-   }
-   writeWsTimesToFile(array);
+    array.unshift({
+        time: time,
+        event: event
+    });
+    if (array.length > 20) {
+        array.pop();
+    }
+    writeWsTimesToFile(array);
 }
 
 const cssStyles = `
@@ -374,13 +414,13 @@ const cssStyles = `
 
 app.get('/', (req, res) => {
 
-   tokenData = readTokenDataFromFile();
-   wsTimes = readWsTimesFromFile();
-   messageHistory = readMessageHistoryFromFile();
+    tokenData = readTokenDataFromFile();
+    wsTimes = readWsTimesFromFile();
+    messageHistory = readMessageHistoryFromFile();
 
-   let tokenDataHtml = '';
-   if (tokenData && Object.keys(tokenData).length > 0) {
-      tokenDataHtml = `
+    let tokenDataHtml = '';
+    if (tokenData && Object.keys(tokenData).length > 0) {
+        tokenDataHtml = `
         <div class="container">
         <h2 id="toggleTokenData">Show Authentication Data</h2>
         <table class="token-details" style="display: none;">
@@ -398,15 +438,15 @@ app.get('/', (req, res) => {
             </tr>
         </table>
     </div>`;
-   } else {
-      tokenDataHtml = `
+    } else {
+        tokenDataHtml = `
             <div class="container no-data-container">
                 <h2>No Authentication Data Available</h2>
             </div>`;
-   }
-   let webSocketContainerHtml = '';
-   if (wsTimes && wsTimes.length > 0) {
-      webSocketContainerHtml = `
+    }
+    let webSocketContainerHtml = '';
+    if (wsTimes && wsTimes.length > 0) {
+        webSocketContainerHtml = `
         <div class="container">
         <h2 id="toggleWebSocketInfo">Show WebSocket Status</h2>
         <table class="websocket-table" style="display: none;">
@@ -425,15 +465,15 @@ app.get('/', (req, res) => {
             `).join('')}
         </table>
     </div>`;
-   } else {
-      webSocketContainerHtml = `
+    } else {
+        webSocketContainerHtml = `
             <div class="container no-data-container">
                 <h2>No WebSocket Status Available</h2>
             </div>`;
-   }
+    }
 
 
-   let formHtml = `
+    let formHtml = `
         <div class="container">
         <h2 style="text-align: center;">OAuth 2.0 authentication for REST API</h2>
             <form action="/auth" method="post" class="login-form">
@@ -447,25 +487,25 @@ app.get('/', (req, res) => {
         </div>
     `;
 
-   let keepAliveHtml = '';
-   if (_keepAlivecurrentTime) {
-      keepAliveHtml = `
+    let keepAliveHtml = '';
+    if (_keepAlivecurrentTime) {
+        keepAliveHtml = `
             <div class="container" style="background-color: #fff;">
                 <h2>Last Keep Alive message:</h2> 
                 <div style="text-align: center;">
                     <span>${formatKeepAliveTime(_keepAlivecurrentTime)} ago.</span>
                 </div>
             </div>`;
-   } else {
-      keepAliveHtml = `
+    } else {
+        keepAliveHtml = `
         <div class="container no-data-container">
         <h2>No Keep Alive message Available</h2>
     </div>`;
-   }
+    }
 
-   let messageTableHtml = '';
-   if (messageHistory && messageHistory.length > 0) {
-      messageTableHtml = `
+    let messageTableHtml = '';
+    if (messageHistory && messageHistory.length > 0) {
+        messageTableHtml = `
             <div class="container">
                 <h2 id="toggleMessageHistory">Show Message History</h2>
                 <table class="message-table" style="display: none;">
@@ -481,14 +521,14 @@ app.get('/', (req, res) => {
                     `).join('')}
                 </table>
             </div>`;
-   } else {
-      messageTableHtml = `
+    } else {
+        messageTableHtml = `
       <div class="container no-data-container">
           <h2>No Message History Available</h2>
       </div>`;
-   }
+    }
 
-   res.send(`
+    res.send(`
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -555,229 +595,229 @@ app.get('/', (req, res) => {
 });
 
 app.post('/auth', (req, res) => {
-   const {
-      client_id,
-      client_secret,
-      callback_url
-   } = req.body;
-   _url = callback_url;
-   _client_secret = client_secret;
-   _client_id = client_id;
-   client = new AuthorizationCode({
-      client: {
-         id: client_id,
-         secret: client_secret,
-      },
-      auth: {
-         tokenHost: 'https://everhome.cloud',
-         authorizeHost: 'https://everhome.cloud',
-         tokenPath: '/oauth2/token',
-         authorizePath: '/oauth2/authorize',
-      },
-      http: {
-         json: 'force',
-         headers: {
-            accept: 'text/html',
-         },
-      },
-      options: {
-         authorizationMethod: 'body',
-      },
-   });
+    const {
+        client_id,
+        client_secret,
+        callback_url
+    } = req.body;
+    _url = callback_url;
+    _client_secret = client_secret;
+    _client_id = client_id;
+    client = new AuthorizationCode({
+        client: {
+            id: client_id,
+            secret: client_secret,
+        },
+        auth: {
+            tokenHost: 'https://everhome.cloud',
+            authorizeHost: 'https://everhome.cloud',
+            tokenPath: '/oauth2/token',
+            authorizePath: '/oauth2/authorize',
+        },
+        http: {
+            json: 'force',
+            headers: {
+                accept: 'text/html',
+            },
+        },
+        options: {
+            authorizationMethod: 'body',
+        },
+    });
 
-   const authorizationUri = client.authorizeURL({
-      redirect_uri: callback_url + "callback",
-      state: '3',
-   });
+    const authorizationUri = client.authorizeURL({
+        redirect_uri: callback_url + "callback",
+        state: '3',
+    });
 
-   res.redirect(authorizationUri);
+    res.redirect(authorizationUri);
 });
 
 app.get('/callback', async (req, res) => {
-   const {
-      code
-   } = req.query;
-   const options = {
-      code
-   };
+    const {
+        code
+    } = req.query;
+    const options = {
+        code
+    };
 
-   try {
-      const accessToken = await client.getToken(options);
-      const tokenData = accessToken.token;
+    try {
+        const accessToken = await client.getToken(options);
+        const tokenData = accessToken.token;
 
-      const oAuthData = {
-         client_id: _client_id,
-         client_secret: _client_secret,
-         refresh_token: tokenData.refresh_token
-      };
+        const oAuthData = {
+            client_id: _client_id,
+            client_secret: _client_secret,
+            refresh_token: tokenData.refresh_token
+        };
 
-      writeTokenDataToFile(oAuthData);
-      let data = JSON.stringify(oAuthData);
-      restartEndpoint(data)
-         .then(response => {})
-         .catch(error => {
-            console.error('Error sending to other endpoint:', error);
-         });
+        writeTokenDataToFile(oAuthData);
+        let data = JSON.stringify(oAuthData);
+        restartEndpoint(data)
+            .then(response => { })
+            .catch(error => {
+                console.error('Error sending to other endpoint:', error);
+            });
 
-      res.redirect('/');
+        res.redirect('/');
 
-   } catch (error) {
-      console.error('Authentication failed:', error);
-      return res.status(500).json('Authentication failed');
-   }
+    } catch (error) {
+        console.error('Authentication failed:', error);
+        return res.status(500).json('Authentication failed');
+    }
 });
 
 app.get('/tokendata', (req, res) => {
-   try {
-      const tokenData = readTokenDataFromFile();
-      res.json(tokenData);
-   } catch (error) {
-      console.error('Error reading token data:', error);
-      return res.status(500).json('Error reading token data');
-   }
+    try {
+        const tokenData = readTokenDataFromFile();
+        res.json(tokenData);
+    } catch (error) {
+        console.error('Error reading token data:', error);
+        return res.status(500).json('Error reading token data');
+    }
 });
 
 app.post('/ws', (req, res) => {
-   const {
-      ws_url,
-      postback_url,
-      token,
-      method,
-      topics
-   } = req.body;
+    const {
+        ws_url,
+        postback_url,
+        token,
+        method,
+        topics
+    } = req.body;
 
-   if (ws_url && postback_url && token && method && topics && Array.isArray(topics)) {
-      postbackUrl = postback_url;
+    if (ws_url && postback_url && token && method && topics && Array.isArray(topics)) {
+        postbackUrl = postback_url;
 
-      if (wsConnection) {
-         wsConnection.close();
-      }
+        if (wsConnection) {
+            wsConnection.close();
+        }
 
-      const wsUrl = "wss://" + ws_url + "?x-auth-token=" + token;
-      const ws = new WebSocket(wsUrl);
+        const wsUrl = "wss://" + ws_url + "?x-auth-token=" + token;
+        const ws = new WebSocket(wsUrl);
 
-      wsConnection = ws;
-      let keepAliveInterval;
-      ws.on('open', () => {
-         wsConnected = true;
-         const payload = {
-            method: method,
-            topics: topics
-         };
-         ws.send(JSON.stringify(payload));
-         let now = new Date();
-         let currentTime = now.toLocaleString();
+        wsConnection = ws;
+        let keepAliveInterval;
+        ws.on('open', () => {
+            wsConnected = true;
+            const payload = {
+                method: method,
+                topics: topics
+            };
+            ws.send(JSON.stringify(payload));
+            let now = new Date();
+            let currentTime = now.toLocaleString();
 
-         addToTimeArray(wsTimes, currentTime, 'open');
+            addToTimeArray(wsTimes, currentTime, 'open');
 
-         const sendKeepAlive = () => {
-            if (wsConnected) {
-                ws.send(JSON.stringify({
-                    keepAlive: true
-                }), (error) => {
-                    if (error) {
-                        console.log("Error sending Keep-Alive:", error);
-                    } else {
-                        let now = new Date();
-                        let currentTime = now.toLocaleString();
-                        _keepAlivecurrentTime = currentTime;
-                        const obj = {
-                            keep_alive: true,
-                            time: currentTime
-                        };
-                        //console.log(JSON.stringify(obj));
-                    }
-                });
-            } else {
-                console.log("WebSocket not connected. Keep-Alive not sent.");
+            const sendKeepAlive = () => {
+                if (wsConnected) {
+                    ws.send(JSON.stringify({
+                        keepAlive: true
+                    }), (error) => {
+                        if (error) {
+                            console.log("Error sending Keep-Alive:", error);
+                        } else {
+                            let now = new Date();
+                            let currentTime = now.toLocaleString();
+                            _keepAlivecurrentTime = currentTime;
+                            const obj = {
+                                keep_alive: true,
+                                time: currentTime
+                            };
+                            //console.log(JSON.stringify(obj));
+                        }
+                    });
+                } else {
+                    console.log("WebSocket not connected. Keep-Alive not sent.");
+                }
+            };
+
+            keepAliveInterval = setInterval(sendKeepAlive, 55000);
+        });
+
+        const MAX_MESSAGES = 20;
+
+        ws.on('message', (data) => {
+            const jsonData = JSON.parse(data);
+            jsonData.timestamp = new Date();
+
+            messageHistory.unshift(jsonData);
+            if (messageHistory.length > MAX_MESSAGES) {
+                messageHistory.pop();
             }
-        };
+            writeMessageHistoryToFile();
 
-         keepAliveInterval = setInterval(sendKeepAlive, 55000);
-      });
-
-      const MAX_MESSAGES = 20;
-
-      ws.on('message', (data) => {
-         const jsonData = JSON.parse(data);
-         jsonData.timestamp = new Date();
-
-         messageHistory.unshift(jsonData);
-         if (messageHistory.length > MAX_MESSAGES) {
-            messageHistory.pop();
-         }
-         writeMessageHistoryToFile();
-
-         sendToOtherEndpoint(jsonData)
-            .then(response => {
-               // handle response if needed
-            })
-            .catch(error => {
-               console.error('Error sending to other endpoint:', error);
-            });
+            sendToOtherEndpoint(jsonData)
+                .then(response => {
+                    // handle response if needed
+                })
+                .catch(error => {
+                    console.error('Error sending to other endpoint:', error);
+                });
 
 
-      });
+        });
 
-      ws.on('error', (error) => {
+        ws.on('error', (error) => {
 
-         let now = new Date();
-         let currentTime = now.toLocaleString();
-         addToTimeArray(wsTimes, currentTime, 'error');
+            let now = new Date();
+            let currentTime = now.toLocaleString();
+            addToTimeArray(wsTimes, currentTime, 'error');
 
-         console.error('WebSocket error:', error);
-      });
+            console.error('WebSocket error:', error);
+        });
 
-      ws.on('close', () => {
-         let now = new Date();
-         let currentTime = now.toLocaleString();
-         addToTimeArray(wsTimes, currentTime, 'close');
-         wsConnected = false;
-         clearInterval(keepAliveInterval);
-      });
+        ws.on('close', () => {
+            let now = new Date();
+            let currentTime = now.toLocaleString();
+            addToTimeArray(wsTimes, currentTime, 'close');
+            wsConnected = false;
+            clearInterval(keepAliveInterval);
+        });
 
-      ws.on('unexpected-response', (request, response) => {
+        ws.on('unexpected-response', (request, response) => {
 
-         let now = new Date();
-         let currentTime = now.toLocaleString();
-         addToTimeArray(wsTimes, currentTime, 'unexpected-response');
+            let now = new Date();
+            let currentTime = now.toLocaleString();
+            addToTimeArray(wsTimes, currentTime, 'unexpected-response');
 
-         console.error('Unexpected WebSocket response:', response.statusCode);
-      });
+            console.error('Unexpected WebSocket response:', response.statusCode);
+        });
 
-      var subscriptionSuccessful = "Subscription successful";
-      res.status(200).send(subscriptionSuccessful);
-      console.log(subscriptionSuccessful);
-   } else {
-      var badRequest = "Bad Request";
-      res.status(400).send(badRequest);
-      console.error(subscriptionSuccessful);
-   }
+        var subscriptionSuccessful = "Subscription successful";
+        res.status(200).send(subscriptionSuccessful);
+        console.log(subscriptionSuccessful);
+    } else {
+        var badRequest = "Bad Request";
+        res.status(400).send(badRequest);
+        console.error(subscriptionSuccessful);
+    }
 });
 
 app.get('/status', (req, res) => {
-   res.json({
-      wsConnected
-   });
+    res.json({
+        wsConnected
+    });
 });
 
 async function sendToOtherEndpoint(data) {
-   return await axios.post(postbackUrl, data);
+    return await axios.post(postbackUrl, data);
 }
 
 async function restartEndpoint(data) {
-   return await axios.post(restartUrl, data);
+    return await axios.post(restartUrl, data);
 }
 
 app.listen(port, hostname, (err) => {
-   if (err) return console.error(err);
-   const obj = {
-      server_is_running: true,
-      port: port
-   };
-   console.log(JSON.stringify(obj));
+    if (err) return console.error(err);
+    const obj = {
+        server_is_running: true,
+        port: port
+    };
+    console.log(JSON.stringify(obj));
 
-   tokenData = readTokenDataFromFile();
-   wsTimes = readWsTimesFromFile();
-   messageHistory = readMessageHistoryFromFile();
+    tokenData = readTokenDataFromFile();
+    wsTimes = readWsTimesFromFile();
+    messageHistory = readMessageHistoryFromFile();
 });
