@@ -65,14 +65,29 @@ Um die benötigten Module zu installieren, gehe wie folgt vor:
 
 Die Module werden nun heruntergeladen und in Node-RED installiert.
 
-#### 2. Flows importieren  
-Um den Flow `everHome2MQTT.json` zu importieren, folge diesen Schritten:
+### 2. Flows importieren
 
-- Klicke oben rechts auf das **Burgermenü** (drei horizontale Linien).
-- Wähle **Importieren** aus.
-- Im folgenden Fenster kannst du die Datei `everHome2MQTT.json` entweder direkt hochladen oder den Inhalt der Datei manuell einfügen.
-  - Wähle die Datei `everHome2MQTT.json` und klicke auf **Importieren**.
-- Der Flow wird nun in die Benutzeroberfläche geladen und kann verwendet werden.
+Falls es sich nicht um ein Erstinstallations-Szenario handelt, sondern um ein Update, sollten die alten Flows vorher gelöscht werden. Beachte, dass immer mindestens ein Flow vorhanden sein muss. Wenn also alle **everHome2MQTT** Flows gelöscht werden sollen, muss zuvor ein anderer Flow angelegt werden.
+
+#### Alte Flows löschen (Update Szenario)
+
+Um alte Flows zu löschen, folge diesen Schritten:
+
+- Wähle den gewünschten Flow aus.
+- Klicke mit der rechten Maustaste und wähle **Löschen** aus dem Kontextmenü.
+- Gegebenenfalls kannst du mit der Plus-Taste einen leeren Flow erstellen, um alle anderen Flows löschen zu können.
+
+#### Flows importieren
+
+Um die Flows-Datei `everHome2MQTT.json` zu importieren, folge diesen Schritten:
+
+- Klicke oben rechts auf das Burgermenü.
+- Wähle **Importieren** aus dem Dropdown-Menü.
+- Im folgenden Fenster kannst du die Datei `everHome2MQTT.json` entweder direkt hochladen oder den Inhalt der Datei manuell einfügen:
+  - Klicke auf **Datei auswählen**, suche die Datei `everHome2MQTT.json` und wähle sie aus.
+  - Klicke anschließend auf **Importieren**.
+- Der Flow wird nun in die Benutzeroberfläche geladen und steht zur Verwendung bereit.
+
 
 #### 3. MQTT Knoten einrichten  
 - Im Reiter "everHome2MQTT Control" auf einen beliebigen **MQTT-Knoten** klicken (lila Farbe) und den **Server** über das Stiftsymbol bearbeiten.
