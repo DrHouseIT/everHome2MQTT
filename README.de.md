@@ -95,11 +95,14 @@ Nachdem der Flow und die Module eingerichtet wurden, folge diesen Schritten, um 
 ## Authentifizierung
 
 Einmalig muss eine Authentifizierung der Anwendung bei **everHome** erfolgen:
+
 1. Eine neue Anwendung unter [https://everhome.cloud/de/entwickler/anwendungen](https://everhome.cloud/de/entwickler/anwendungen) anlegen.
 2. **Client Secret** und **Client ID** in einer Textdatei oder ähnlichem speichern.
-3. Zur Authentifizierung im Browser Seite [http://homeassistant.local:3000](http://homeassistant.local:3000) eingeben.
-   - Sollte der Port 3000 bereits belegt sein, kann in der `/homeassistant/everHome2MQTT/config.yaml` ein anderer Port definiert werden.
-   - Danach die Flows neu starten oder Node-RED neu starten (siehe oben).
+3. Zur Authentifizierung im Browser die Seite [http://homeassistant.local:3000](http://homeassistant.local:3000) eingeben.
+   - Nun sollte sich die Weboberfläche von everHome2MQTT öffnen.
+   - Wenn das nicht der Fall ist, ggf. kurz warten. Sollte nach 1 Minute der Server nicht erreichbar sein, könnte es sein, dass der für den Server eingestellte Port bereits verwendet wird.
+   - Wenn das der Fall ist, wird es im Node-RED-Protokoll wie folgt protokolliert: _ERROR: Uncaught Exception: Error: listen EADDRINUSE: address already in use 0.0.0.0:3000_. Um das Protokoll des Node-RED-Add-ons in Home Assistant anzuzeigen, navigiere zu Einstellungen > Add-ons, wähle Node-RED aus der Liste und klicke auf die Registerkarte "Protokolle". Dort kannst du die aktuellen Protokolle einsehen und bei Bedarf aktualisieren.
+   - Ggf. kann in der `/homeassistant/everHome2MQTT/config.yaml` ein anderer Port definiert werden. Danach müssen die Flows oder Node-RED neu gestartet werden (siehe oben).
 4. Auf der Weboberfläche des **everHome2MQTT-Servers** die gespeicherten **Client Secret** und **Client ID** in das Formular eintragen (Achtung: Die beiden Werte nicht vertauschen) und der Anwendung Zugriff gewähren.
 
 ## MQTT-Integration

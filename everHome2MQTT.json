@@ -1179,7 +1179,9 @@
             "2063774a9b105040",
             "efa6d18633bd3ccd",
             "765a7487a8e19abf",
-            "40efcc54acebdeba"
+            "40efcc54acebdeba",
+            "ac92c2d1ac6a7eda",
+            "8f538d9c0460fb3a"
         ],
         "x": 54,
         "y": 59,
@@ -1625,12 +1627,6 @@
                 "29eebf99226b1b21"
             ]
         ]
-    },
-    {
-        "id": "32920df5.c1a102",
-        "type": "server",
-        "name": "Home Assistant",
-        "addon": true
     },
     {
         "id": "010c8dcccc60a718",
@@ -4994,14 +4990,22 @@
         "grant_type": "set_by_credentials",
         "access_token_url": "http://localhost:3000/oauth/token ",
         "authorization_endpoint": "",
+        "redirect_uri": "http://192.168.178.54:8123/api/hassio_ingress/6uho3OJS5ULUNBB166TT4igarJWaZUyXSCY46tzkGBg/oauth2/redirect",
         "open_authentication": "",
-        "username": "pedroet",
+        "username": "",
         "password": "",
-        "client_id": "confidentialApplication",
-        "client_secret": "topSecret",
+        "client_id": "",
+        "client_secret": "",
+        "response_type": "",
+        "access_type": "",
+        "refresh_token": "",
+        "prompt": "",
         "scope": "*",
         "resource": "",
+        "state": "",
         "proxy": "",
+        "debug": false,
+        "force": true,
         "senderr": false,
         "client_credentials_in_body": true,
         "rejectUnauthorized": true,
@@ -5123,7 +5127,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "check statusCode",
-        "func": "if (msg.statusCode === 200){\n    return msg;\n}else{\n    return null;\n}",
+        "func": "const configuration = global.get('configuration');\nconst ip = global.get(\"internalIPvX\");\nconst port = configuration.ports.everHome2MQTT;\n\nif (msg.statusCode === 200 && msg.payload !== \"[]\"){\n    return msg;\n}else{\n    node.error(`Statuscode: ${msg.statusCode}`);\n\n    if (msg.payload === \"[]\"){\n        node.error(`No token data is available. Please perform the authentication on the everHome2MQTT server: http://${ip}:${port}`);\n    }\n    return null;\n}\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5920,7 +5924,7 @@
         "type": "exec",
         "z": "882084c144462778",
         "g": "714ee53a3861c61a",
-        "command": "node /homeassistant/everHome2MQTT/server/everHome2MQTT.js /homeassistant/everHome2MQTT/server/data/",
+        "command": "node /homeassistant/everHome2MQTT/server/everHome2MQTT.js",
         "addpay": "append",
         "append": "",
         "useSpawn": "true",
@@ -5928,15 +5932,17 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1150,
+        "x": 1000,
         "y": 160,
         "wires": [
             [
                 "bd497c76fb3c9e75",
-                "18bf953f6b85c405"
+                "18bf953f6b85c405",
+                "ac92c2d1ac6a7eda"
             ],
             [
-                "bd497c76fb3c9e75"
+                "bd497c76fb3c9e75",
+                "8f538d9c0460fb3a"
             ],
             [
                 "bd497c76fb3c9e75"
@@ -6985,6 +6991,44 @@
             [
                 "efa6d18633bd3ccd"
             ]
+        ]
+    },
+    {
+        "id": "ac92c2d1ac6a7eda",
+        "type": "function",
+        "z": "882084c144462778",
+        "g": "714ee53a3861c61a",
+        "name": "node.log(msg.payload);",
+        "func": "node.log(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f538d9c0460fb3a",
+        "type": "function",
+        "z": "882084c144462778",
+        "g": "714ee53a3861c61a",
+        "name": "node.error(msg.payload);",
+        "func": "node.error(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 200,
+        "wires": [
+            []
         ]
     },
     {
@@ -10770,7 +10814,7 @@
         "z": "4c7024461c6c9a94",
         "g": "4959409e2e6b91aa",
         "name": "set wsConnected to false",
-        "func": "msg.payload.wsConnected = false;\nconsole.log(\"subscription_successful: \" + global.get(\"subscription_successful\"));\nreturn msg;",
+        "func": "msg.payload.wsConnected = false;\n//console.log(\"subscription_successful: \" + global.get(\"subscription_successful\"));\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
