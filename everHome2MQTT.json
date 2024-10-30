@@ -48,6 +48,14 @@
         "env": []
     },
     {
+        "id": "25ec8fb701364b85",
+        "type": "tab",
+        "label": "everHome2MQTT Update",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2a67f9b3b75f4816",
         "type": "subflow",
         "name": "Delay Motiondetector",
@@ -805,12 +813,25 @@
             "1962364b9fa3a2db",
             "2fe36f04f8969a4d",
             "2c9e7c2c2e2a0e16",
-            "0487a6ea15b08097"
+            "0487a6ea15b08097",
+            "66f5969ca3a9f48c",
+            "a87d899f6a0ff312",
+            "21b2ab539584aa23",
+            "3b13dfd3742ee528",
+            "1d28dba444f8362e",
+            "ea7e5c96d648bdcd",
+            "a1323e6c688d9be6",
+            "ac44dc4abe0f30d8",
+            "7d81a0d56f49f997",
+            "375d7b191f27a57a",
+            "d0c1f06a67fd9c3b",
+            "1231262c60967aa8",
+            "61493f861d06d207"
         ],
         "x": 54,
         "y": 59,
         "w": 2292,
-        "h": 342
+        "h": 502
     },
     {
         "id": "ebad0b280b30e495",
@@ -1391,7 +1412,7 @@
             "f9bc7cbca77a0e7c"
         ],
         "x": 54,
-        "y": 459,
+        "y": 659,
         "w": 2292,
         "h": 2142
     },
@@ -1484,6 +1505,42 @@
         "y": 2919,
         "w": 972,
         "h": 222
+    },
+    {
+        "id": "e0d4e80999f657f7",
+        "type": "group",
+        "z": "25ec8fb701364b85",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "79e86f781487ccd3",
+            "41a761a0ca911504",
+            "7361e204aa4ce451",
+            "5729cc35f5987f51",
+            "21de7ae9c72cdbf1",
+            "2678d92597c9cf86",
+            "7a3c3981dd654b43",
+            "fd6f69061c79d8e3",
+            "4de184e3416236e9",
+            "e79bcad893f668ca",
+            "cf03e0fc66b00cc8",
+            "a2f4b4e8d640647d",
+            "e9a6ce0a849ea991",
+            "71e6f42c0e0f18dc",
+            "563fcfa07f5807ca",
+            "08b03cdebec5c821"
+        ],
+        "x": 54,
+        "y": 59,
+        "w": 2112,
+        "h": 322
     },
     {
         "id": "8502b8640b5d2af5",
@@ -1625,6 +1682,19 @@
         "wires": [
             [
                 "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "563fcfa07f5807ca",
+        "type": "junction",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "5729cc35f5987f51"
             ]
         ]
     },
@@ -5332,7 +5402,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "translations",
-        "func": "const translations = {\n    \"lastexecute\": {\n        \"en\": \"Last execute\",\n        \"fr\": \"Dernière exécution\",\n        \"de\": \"Letzte Ausführung\"\n    },\n    \"lastreceive\": {\n        \"en\": \"Last transmission\",\n        \"fr\": \"Dernière diffusion\",\n        \"de\": \"Letzte Übertragung\"\n    },    \n    \"subtype\": {\n    \"en\": \"Device type\",\n    \"fr\": \"Type d'appareil\",\n    \"de\": \"Gerätetyp\"\n    },\n    \"shutter\": {\n        \"en\": \"Roller shutter\",\n        \"fr\": \"Volet roulant\",\n        \"de\": \"Rollladen\"\n    },   \n    \"window\": {\n        \"en\": \"Window\",\n        \"fr\": \"Fenêtre\",\n        \"de\": \"Fenster\"\n    },       \n    \"door\": {\n        \"en\": \"Door\",\n        \"fr\": \"Porte\",\n        \"de\": \"Tür\"\n    },\n    \"light\": {\n        \"en\": \"Light\",\n        \"fr\": \"Lumière\",\n        \"de\": \"Licht\"\n    },  \n    \"socket\": {\n        \"en\": \"Power outlet\",\n        \"fr\": \"Prise de courant\",\n        \"de\": \"Steckdose\"\n    },   \n    \"brightness\": {\n        \"en\": \"Brightness\",\n        \"fr\": \"Luminosité\",\n        \"de\": \"Helligkeit\"\n    }, \n    \"heating\": {\n        \"en\": \"Heating\",\n        \"fr\": \"Chauffe-eau\",\n        \"de\": \"Heizung\"\n    },\n    \"impulse\": {\n        \"en\": \"Impulse\",\n        \"fr\": \"Impulsion\",\n        \"de\": \"Impuls\"\n    },\n    \"sender\": {\n        \"en\": \"Transmitter\",\n        \"fr\": \"Canaliser\",\n        \"de\": \"Sender\"\n    },\n    \"gateway\": {\n        \"en\": \"Gateway\",\n        \"fr\": \"Gateway\",\n        \"de\": \"Gateway\"\n    },\n    \"batteryboolean\": {\n        \"en\": \"Battery status\",\n        \"fr\": \"État de la batterie\",\n        \"de\": \"Batteriestatus\"\n    },\n    \"serial\": {\n        \"en\": \"Serial number\",\n        \"fr\": \"Numéro de série\",\n        \"de\": \"Seriennummer\"\n    },    \n    \"batterypercentage\": {\n        \"en\": \"Battery\",\n        \"fr\": \"Batterie\",\n        \"de\": \"Batterie\"\n    },\n    \"batteryvoltage\": {\n        \"en\": \"Battery voltage\",\n        \"fr\": \"Tension de la batterie\",\n        \"de\": \"Batteriespannung\"\n    }, \n    \"valve\": {\n        \"en\": \"Valve position\",\n        \"fr\": \"Position de la vanne\",\n        \"de\": \"Ventilstellung\"\n    },\n    \"temperature\": {\n        \"en\": \"Temperature\",\n        \"fr\": \"Température\",\n        \"de\": \"Temperatur\"\n    },\n    \"temperaturetarget\": {\n        \"en\": \"Target temperature\",\n        \"fr\": \"Température cible\",\n        \"de\": \"Soll Temperatur\"\n    },\n    \"mobile\": {\n        \"en\": \"Mobile devices\",\n        \"fr\": \"Appareils mobiles\",\n        \"de\": \"Mobilgeräte\"\n    }, \n    \"electricitymeter\": {\n        \"en\": \"Electricity meter\",\n        \"fr\": \"Compteur d'électricité\",\n        \"de\": \"Stromzähler\" \n    },\n    \"connected\": {\n        \"en\": \"Connection state\",\n        \"fr\": \"État de la connexion\",\n        \"de\": \"Verbindungsstatus\"\n    },\n    \"ip-wifi\": {\n        \"en\": \"Wifi IP address\",\n        \"fr\": \"Adresse IP Wifi\",\n        \"de\": \"WLAN IP-Adresse\"\n    },   \n    \"localip\": {\n        \"en\": \"IP address in the home network\",\n        \"fr\": \"Adresse IP dans le réseau domestique\",\n        \"de\": \"IP Adresse im Heimnetzwerk\"\n    },   \n    \"wanip\": {\n        \"en\": \"Public IP address\",\n        \"fr\": \"Adresse IP publique\",\n        \"de\": \"Öffentliche IP-Adresse\"\n    },\n    \"humidity\": {\n        \"en\": \"Humidity\",\n        \"fr\": \"Humidité de l'air\",\n        \"de\": \"Luftfeuchtigkeit\"\n    },\n    \"local_api_connected\": {\n        \"en\": \"Local interface\",\n        \"fr\": \"Interface locale\",\n        \"de\": \"Lokale Schnittstelle\"        \n    },   \n    \"motion\": {\n        \"en\": \"Motion\",\n        \"fr\": \"Mouvement\",\n        \"de\": \"Bewegung\"        \n    }, \n    \"motiondetector\": {\n        \"en\": \"Motion detectorn\",\n        \"fr\": \"Détecteur de mouvement\",\n        \"de\": \"Bewegungsmelder\"\n    },                                                                                                               \n    \"action\": {\n        \"en\": \"Action\",\n        \"fr\": \"Action\",\n        \"de\": \"Aktion\"\n    }, \n    \"blind\": {\n        \"en\": \"Blind\",\n        \"fr\": \"Stores vénitiens\",\n        \"de\": \"Raffstore\"\n    },\n    \"group\": {\n        \"en\": \"Group\",\n        \"fr\": \"Groupe\",\n        \"de\": \"Gruppe\"\n    },  \n    \"groups\": {\n        \"en\": \"Groups\",\n        \"fr\": \"Groupes\",\n        \"de\": \"Gruppen\"\n    }, \n    \"home\": {\n        \"en\": \"Home\",\n        \"fr\": \"Maison\",\n        \"de\": \"Heim\"\n    }, \n    \"present\": {\n        \"en\": \"Present\",\n        \"fr\": \"Présent\",\n        \"de\": \"Anwesend\"\n    },\n    \"away\": {\n        \"en\": \"Away\",\n        \"fr\": \"Absent\",\n        \"de\": \"Abwesend\"\n    },\n    \"holiday\": {\n        \"en\": \"Holiday\",\n        \"fr\": \"Vacances\",\n        \"de\": \"Urlaub\"\n    },    \n    \"presence\": {\n        \"en\": \"Presence\",\n        \"fr\": \"Présence\",\n        \"de\": \"Anwesenheit\"\n    },\n    \"luminance\": {\n        \"en\": \"Luminance\",\n        \"fr\": \"Luminance\",\n        \"de\": \"Lichtstärke\"\n    },   \n    \"lightsensor\": {\n        \"en\": \"Lightsensor\",\n        \"fr\": \"Capteur de lumière\",\n        \"de\": \"Lichtsensor\"\n    },   \n    \"awning\": {\n        \"en\": \"Awning\",\n        \"fr\": \"auvent\",\n        \"de\": \"Markise\"\n    },          \n};\nglobal.set(\"translations\", translations);\nreturn msg;\n\n",
+        "func": "const translations = {\n    \"lastexecute\": {\n        \"en\": \"Last execute\",\n        \"fr\": \"Dernière exécution\",\n        \"de\": \"Letzte Ausführung\"\n    },\n    \"lastreceive\": {\n        \"en\": \"Last transmission\",\n        \"fr\": \"Dernière diffusion\",\n        \"de\": \"Letzte Übertragung\"\n    },    \n    \"subtype\": {\n    \"en\": \"Device type\",\n    \"fr\": \"Type d'appareil\",\n    \"de\": \"Gerätetyp\"\n    },\n    \"shutter\": {\n        \"en\": \"Roller shutter\",\n        \"fr\": \"Volet roulant\",\n        \"de\": \"Rollladen\"\n    },   \n    \"window\": {\n        \"en\": \"Window\",\n        \"fr\": \"Fenêtre\",\n        \"de\": \"Fenster\"\n    },       \n    \"door\": {\n        \"en\": \"Door\",\n        \"fr\": \"Porte\",\n        \"de\": \"Tür\"\n    },\n    \"light\": {\n        \"en\": \"Light\",\n        \"fr\": \"Lumière\",\n        \"de\": \"Licht\"\n    },  \n    \"socket\": {\n        \"en\": \"Power outlet\",\n        \"fr\": \"Prise de courant\",\n        \"de\": \"Steckdose\"\n    },   \n    \"brightness\": {\n        \"en\": \"Brightness\",\n        \"fr\": \"Luminosité\",\n        \"de\": \"Helligkeit\"\n    }, \n    \"heating\": {\n        \"en\": \"Heating\",\n        \"fr\": \"Chauffe-eau\",\n        \"de\": \"Heizung\"\n    },\n    \"impulse\": {\n        \"en\": \"Impulse\",\n        \"fr\": \"Impulsion\",\n        \"de\": \"Impuls\"\n    },\n    \"sender\": {\n        \"en\": \"Transmitter\",\n        \"fr\": \"Canaliser\",\n        \"de\": \"Sender\"\n    },\n    \"gateway\": {\n        \"en\": \"Gateway\",\n        \"fr\": \"Gateway\",\n        \"de\": \"Gateway\"\n    },\n    \"batteryboolean\": {\n        \"en\": \"Battery status\",\n        \"fr\": \"État de la batterie\",\n        \"de\": \"Batteriestatus\"\n    },\n    \"serial\": {\n        \"en\": \"Serial number\",\n        \"fr\": \"Numéro de série\",\n        \"de\": \"Seriennummer\"\n    },    \n    \"batterypercentage\": {\n        \"en\": \"Battery\",\n        \"fr\": \"Batterie\",\n        \"de\": \"Batterie\"\n    },\n    \"batteryvoltage\": {\n        \"en\": \"Battery voltage\",\n        \"fr\": \"Tension de la batterie\",\n        \"de\": \"Batteriespannung\"\n    }, \n    \"valve\": {\n        \"en\": \"Valve position\",\n        \"fr\": \"Position de la vanne\",\n        \"de\": \"Ventilstellung\"\n    },\n    \"temperature\": {\n        \"en\": \"Temperature\",\n        \"fr\": \"Température\",\n        \"de\": \"Temperatur\"\n    },\n    \"temperaturetarget\": {\n        \"en\": \"Target temperature\",\n        \"fr\": \"Température cible\",\n        \"de\": \"Soll Temperatur\"\n    },\n    \"mobile\": {\n        \"en\": \"Mobile devices\",\n        \"fr\": \"Appareils mobiles\",\n        \"de\": \"Mobilgeräte\"\n    }, \n    \"electricitymeter\": {\n        \"en\": \"Electricity meter\",\n        \"fr\": \"Compteur d'électricité\",\n        \"de\": \"Stromzähler\" \n    },\n    \"connected\": {\n        \"en\": \"Connection state\",\n        \"fr\": \"État de la connexion\",\n        \"de\": \"Verbindungsstatus\"\n    },\n    \"ip-wifi\": {\n        \"en\": \"Wifi IP address\",\n        \"fr\": \"Adresse IP Wifi\",\n        \"de\": \"WLAN IP-Adresse\"\n    },   \n    \"localip\": {\n        \"en\": \"IP address in the home network\",\n        \"fr\": \"Adresse IP dans le réseau domestique\",\n        \"de\": \"IP Adresse im Heimnetzwerk\"\n    },   \n    \"wanip\": {\n        \"en\": \"Public IP address\",\n        \"fr\": \"Adresse IP publique\",\n        \"de\": \"Öffentliche IP-Adresse\"\n    },\n    \"humidity\": {\n        \"en\": \"Humidity\",\n        \"fr\": \"Humidité de l'air\",\n        \"de\": \"Luftfeuchtigkeit\"\n    },\n    \"local_api_connected\": {\n        \"en\": \"Local interface\",\n        \"fr\": \"Interface locale\",\n        \"de\": \"Lokale Schnittstelle\"        \n    },   \n    \"motion\": {\n        \"en\": \"Motion\",\n        \"fr\": \"Mouvement\",\n        \"de\": \"Bewegung\"        \n    }, \n    \"motiondetector\": {\n        \"en\": \"Motion detectorn\",\n        \"fr\": \"Détecteur de mouvement\",\n        \"de\": \"Bewegungsmelder\"\n    },                                                                                                               \n    \"action\": {\n        \"en\": \"Action\",\n        \"fr\": \"Action\",\n        \"de\": \"Aktion\"\n    }, \n    \"blind\": {\n        \"en\": \"Blind\",\n        \"fr\": \"Stores vénitiens\",\n        \"de\": \"Raffstore\"\n    },\n    \"group\": {\n        \"en\": \"Group\",\n        \"fr\": \"Groupe\",\n        \"de\": \"Gruppe\"\n    },  \n    \"groups\": {\n        \"en\": \"Groups\",\n        \"fr\": \"Groupes\",\n        \"de\": \"Gruppen\"\n    }, \n    \"home\": {\n        \"en\": \"Home\",\n        \"fr\": \"Maison\",\n        \"de\": \"Heim\"\n    }, \n    \"present\": {\n        \"en\": \"Present\",\n        \"fr\": \"Présent\",\n        \"de\": \"Anwesend\"\n    },\n    \"away\": {\n        \"en\": \"Away\",\n        \"fr\": \"Absent\",\n        \"de\": \"Abwesend\"\n    },\n    \"holiday\": {\n        \"en\": \"Holiday\",\n        \"fr\": \"Vacances\",\n        \"de\": \"Urlaub\"\n    },    \n    \"presence\": {\n        \"en\": \"Presence\",\n        \"fr\": \"Présence\",\n        \"de\": \"Anwesenheit\"\n    },\n    \"luminance\": {\n        \"en\": \"Luminance\",\n        \"fr\": \"Luminance\",\n        \"de\": \"Lichtstärke\"\n    },   \n    \"lightsensor\": {\n        \"en\": \"Lightsensor\",\n        \"fr\": \"Capteur de lumière\",\n        \"de\": \"Lichtsensor\"\n    },   \n    \"awning\": {\n        \"en\": \"Awning\",\n        \"fr\": \"auvent\",\n        \"de\": \"Markise\"\n    }, \n    \"latest_version\": {\n        \"en\": \"Latest Version\",\n        \"fr\": \"Dernière version\",\n        \"de\": \"Neueste Version\"\n    },\n    \"installed_version\": {\n        \"en\": \"Installed Version\",\n        \"fr\": \"Version installée\",\n        \"de\": \"Installierte Version\"\n    },\n    \"synchronize\": {\n        \"en\": \"Synchronize\",\n        \"fr\": \"Synchroniser\",\n        \"de\": \"Synchronisieren\"\n    }    \n};\nglobal.set(\"translations\", translations);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7045,7 +7115,7 @@
         "finalize": "",
         "libs": [],
         "x": 1020,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "2c9e7c2c2e2a0e16",
@@ -7067,7 +7137,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 360,
+        "y": 400,
         "wires": [
             [
                 "3fe7f96c15ee6699"
@@ -7080,7 +7150,7 @@
         "z": "95278f532bb93da2",
         "g": "12555d2026f2b1f7",
         "name": "Restart button",
-        "func": "let uniq_id = msg.uniq_id;\nlet obj_id = uniq_id;\n\nconst name = \"Restart\";\nconst valueJsonVariable = 'value_json.' + uniq_id;  \nconst cmd_t = \"everhome/control/refresh\";\n\nconst configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.command;\n\nconst central_device_id = \"everhome_central\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": obj_id,\n    \"cmd_t\": cmd_t,\n    \"payload_press\": \"reset\",\n    \"entity_category\": \"config\",\n    \"device_class\": \"update\",\n    //\"name\": name,\n    \"retain\": retain,  \n    \"dev\": {\n        \"ids\": [\n            central_device_id\n        ]\n    },\n    \"avty\": [\n        {\n            \"t\": \"everhome/central/state_connected/websocket\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        },\n        {\n            \"t\": \"everhome/central/state_connected/mqtt\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        }\n\n    ],\n    \"avty_mode\": \"all\"\n };\n\nmsg.payload = payload;\n\nreturn msg;",
+        "func": "let uniq_id = msg.uniq_id;\nlet obj_id = uniq_id;\n\nconst valueJsonVariable = 'value_json.' + uniq_id;  \nconst cmd_t = \"everhome/control/refresh\";\n\nconst configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.command;\n\nconst central_device_id = \"everhome_central\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": obj_id,\n    \"cmd_t\": cmd_t,\n    \"payload_press\": \"reset\",\n    \"entity_category\": \"config\",\n    \"device_class\": \"update\",\n    \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(\"synchronize\", global.get(\"language\")),\n    \"retain\": retain,  \n    \"dev\": {\n        \"ids\": [\n            central_device_id\n        ]\n    },\n    \"avty\": [\n        {\n            \"t\": \"everhome/central/state_connected/websocket\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        },\n        {\n            \"t\": \"everhome/central/state_connected/mqtt\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        }\n\n    ],\n    \"avty_mode\": \"all\"\n };\n\nmsg.payload = payload;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7088,11 +7158,11 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 300,
+        "y": 280,
         "wires": [
             [
                 "07ccf8bc620e2eb5",
-                "1ea03c0fdb17c030"
+                "66f5969ca3a9f48c"
             ]
         ]
     },
@@ -7110,7 +7180,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 300,
+        "y": 280,
         "wires": [
             [
                 "4c666029cb05a518"
@@ -7127,7 +7197,7 @@
             "36d70bfe397ec698"
         ],
         "x": 95,
-        "y": 180,
+        "y": 260,
         "wires": [
             [
                 "70a5be8ee1988fb7"
@@ -7148,7 +7218,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 180,
+        "y": 160,
         "wires": [
             [
                 "d0dc83969b8c14b4"
@@ -7169,7 +7239,7 @@
         "finalize": "",
         "libs": [],
         "x": 1920,
-        "y": 180,
+        "y": 260,
         "wires": [
             [
                 "0b35e34144c32612"
@@ -7184,7 +7254,7 @@
         "name": "Central",
         "info": "",
         "x": 130,
-        "y": 100,
+        "y": 180,
         "wires": []
     },
     {
@@ -7201,7 +7271,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 180,
+        "y": 260,
         "wires": [
             [
                 "ff3bd0b279e1459b"
@@ -7214,7 +7284,7 @@
         "z": "95278f532bb93da2",
         "g": "12555d2026f2b1f7",
         "name": "Mqtt diagnostic",
-        "func": "const uniq_id = msg.uniq_id;\nconst obj_id = uniq_id;\nconst central_device_id = \"everhome_central\";\nconst device_name = msg.central.device_name;\nconst name = \"Mqtt\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": uniq_id,\n    \"stat_t\": \"everhome/central/state_connected/mqtt\",\n    \"name\": name,\n    \"pl_on\": \"online\",\n    \"pl_off\": \"offline\",\n    \"stat_cla\": \"measurement\",\n    \"dev_cla\": \"connectivity\",\n    \"ent_cat\": \"diagnostic\",\n    \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`,\n    \"dev\": {\n        \"name\": device_name,\n        \"mf\": \"everHome2MQTT\",\n        \"sw\": msg.central.sw_version,\n        \"mdl\": \"Control-Center\",\n        \"cu\": \"https://everhome.cloud\",\n        \"ids\": [\n            central_device_id\n        ]\n    }\n };\n\nmsg.payload = payload;\n\nreturn msg;\n\n",
+        "func": "const uniq_id = msg.uniq_id;\nconst obj_id = uniq_id;\nconst central_device_id = \"everhome_central\";\nconst device_name = msg.central.device_name;\nconst name = \"Mqtt\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": uniq_id,\n    \"stat_t\": \"everhome/central/state_connected/mqtt\",\n    \"name\": name,\n    \"pl_on\": \"online\",\n    \"pl_off\": \"offline\",\n    \"stat_cla\": \"measurement\",\n    \"dev_cla\": \"connectivity\",\n    \"ent_cat\": \"diagnostic\",\n    \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`,\n    \"dev\": {\n        \"name\": device_name,\n        \"mf\": \"everHome2MQTT\",\n        \"mdl\": \"Control-Center\",\n        \"cu\": \"https://github.com/DrHouseIT/everHome2MQTT\",\n        \"ids\": [\n            central_device_id\n        ]\n    }\n };\n\nmsg.payload = payload;\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7222,7 +7292,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 180,
+        "y": 160,
         "wires": [
             [
                 "07ccf8bc620e2eb5",
@@ -7246,7 +7316,7 @@
         "expiry": "",
         "broker": "010c8dcccc60a718",
         "x": 2270,
-        "y": 180,
+        "y": 260,
         "wires": []
     },
     {
@@ -7263,7 +7333,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 240,
+        "y": 220,
         "wires": [
             [
                 "2fe36f04f8969a4d"
@@ -7284,7 +7354,7 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 240,
+        "y": 220,
         "wires": [
             [
                 "098dd18a510b4a34",
@@ -7308,7 +7378,7 @@
         "expiry": "",
         "broker": "010c8dcccc60a718",
         "x": 2270,
-        "y": 940,
+        "y": 1140,
         "wires": []
     },
     {
@@ -7325,7 +7395,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 740,
+        "y": 940,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7352,7 +7422,7 @@
         "repair": false,
         "outputs": 2,
         "x": 260,
-        "y": 860,
+        "y": 1060,
         "wires": [
             [
                 "88002726fa4516fa"
@@ -7376,7 +7446,7 @@
         "finalize": "",
         "libs": [],
         "x": 2060,
-        "y": 940,
+        "y": 1140,
         "wires": [
             [
                 "9072efdb2c998ed8"
@@ -7402,7 +7472,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 760,
+        "y": 960,
         "wires": [
             [
                 "c48afe39ac37f91c"
@@ -7423,7 +7493,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 560,
+        "y": 760,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7444,7 +7514,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 1860,
+        "y": 2060,
         "wires": [
             [
                 "c3d6f0bb540b7bac"
@@ -7468,7 +7538,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 500,
+        "y": 700,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7485,7 +7555,7 @@
             "2fdc460f34229a36"
         ],
         "x": 95,
-        "y": 960,
+        "y": 1160,
         "wires": [
             [
                 "c48afe39ac37f91c"
@@ -7506,7 +7576,7 @@
         "finalize": "",
         "libs": [],
         "x": 1510,
-        "y": 800,
+        "y": 1000,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7527,7 +7597,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 860,
+        "y": 1060,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7548,7 +7618,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 920,
+        "y": 1120,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7569,7 +7639,7 @@
         "finalize": "",
         "libs": [],
         "x": 1510,
-        "y": 980,
+        "y": 1180,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7590,7 +7660,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 1040,
+        "y": 1240,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7611,7 +7681,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1100,
+        "y": 1300,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7632,7 +7702,7 @@
         "finalize": "",
         "libs": [],
         "x": 1400,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "0487a6ea15b08097"
@@ -7653,7 +7723,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 1160,
+        "y": 1360,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7674,7 +7744,7 @@
         "finalize": "",
         "libs": [],
         "x": 1550,
-        "y": 1220,
+        "y": 1420,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7695,7 +7765,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1280,
+        "y": 1480,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7716,7 +7786,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 1340,
+        "y": 1540,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7737,7 +7807,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 1400,
+        "y": 1600,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7758,7 +7828,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1460,
+        "y": 1660,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7779,7 +7849,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 1520,
+        "y": 1720,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7800,7 +7870,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 1580,
+        "y": 1780,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7821,7 +7891,7 @@
         "finalize": "",
         "libs": [],
         "x": 1080,
-        "y": 1340,
+        "y": 1540,
         "wires": [
             [
                 "eed6e24a403e9bd7",
@@ -7873,7 +7943,7 @@
         "finalize": "",
         "libs": [],
         "x": 1510,
-        "y": 1640,
+        "y": 1840,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7894,7 +7964,7 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 1180,
+        "y": 1380,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -7918,7 +7988,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1240,
+        "y": 1440,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -7942,7 +8012,7 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 1180,
+        "y": 1380,
         "wires": [
             [
                 "3099deb5b4d2a9a5"
@@ -7963,7 +8033,7 @@
         "finalize": "",
         "libs": [],
         "x": 1530,
-        "y": 1700,
+        "y": 1900,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -7984,7 +8054,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 1760,
+        "y": 1960,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8005,7 +8075,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1820,
+        "y": 2020,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8026,7 +8096,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1880,
+        "y": 2080,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8047,7 +8117,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 1940,
+        "y": 2140,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8068,7 +8138,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2000,
+        "y": 2200,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8089,7 +8159,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 2560,
+        "y": 2760,
         "wires": [
             [
                 "4a300ee35db77eae",
@@ -8111,7 +8181,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 2560,
+        "y": 2760,
         "wires": [
             [
                 "13294fbd1cf1d90c"
@@ -8137,7 +8207,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1150,
-        "y": 2480,
+        "y": 2680,
         "wires": [
             [
                 "9680249a2bb20205"
@@ -8164,7 +8234,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1160,
-        "y": 2560,
+        "y": 2760,
         "wires": [
             [
                 "e846570c36ad4d23"
@@ -8184,7 +8254,7 @@
             "951449e6169ec919"
         ],
         "x": 915,
-        "y": 2540,
+        "y": 2740,
         "wires": [
             [
                 "9680249a2bb20205"
@@ -8202,7 +8272,7 @@
             "9b27b02732ad3f57"
         ],
         "x": 2105,
-        "y": 2480,
+        "y": 2680,
         "wires": []
     },
     {
@@ -8210,11 +8280,13 @@
         "type": "link out",
         "z": "95278f532bb93da2",
         "g": "12555d2026f2b1f7",
-        "name": "link out 2",
+        "name": "link out - init_config_done",
         "mode": "link",
-        "links": [],
+        "links": [
+            "e79bcad893f668ca"
+        ],
         "x": 1575,
-        "y": 360,
+        "y": 420,
         "wires": []
     },
     {
@@ -8231,7 +8303,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 1620,
+        "y": 1820,
         "wires": [
             [
                 "211a9284e3487795"
@@ -8252,7 +8324,7 @@
         "finalize": "",
         "libs": [],
         "x": 1570,
-        "y": 2240,
+        "y": 2440,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8273,7 +8345,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 1300,
+        "y": 1500,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -8297,7 +8369,7 @@
         "finalize": "",
         "libs": [],
         "x": 1520,
-        "y": 2060,
+        "y": 2260,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8318,7 +8390,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 2120,
+        "y": 2320,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8339,7 +8411,7 @@
         "finalize": "",
         "libs": [],
         "x": 1490,
-        "y": 620,
+        "y": 820,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8360,7 +8432,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 2180,
+        "y": 2380,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8381,7 +8453,7 @@
         "finalize": "",
         "libs": [],
         "x": 1050,
-        "y": 1260,
+        "y": 1460,
         "wires": [
             [
                 "11cd37e7497d68a1"
@@ -8402,7 +8474,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 1300,
+        "y": 1500,
         "wires": [
             [
                 "34f5a994d6ce764c",
@@ -8424,7 +8496,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 1360,
+        "y": 1560,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -8448,7 +8520,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 1420,
+        "y": 1620,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -8472,7 +8544,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 1740,
+        "y": 1940,
         "wires": [
             [
                 "c3d6f0bb540b7bac"
@@ -8496,7 +8568,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 1800,
+        "y": 2000,
         "wires": [
             [
                 "c3d6f0bb540b7bac"
@@ -8517,7 +8589,7 @@
             "5e8def8103a3ab3f"
         ],
         "x": 745,
-        "y": 1800,
+        "y": 2000,
         "wires": []
     },
     {
@@ -8528,7 +8600,7 @@
         "name": "Config",
         "info": "",
         "x": 370,
-        "y": 1120,
+        "y": 1320,
         "wires": []
     },
     {
@@ -8539,7 +8611,7 @@
         "name": "Init",
         "info": "",
         "x": 370,
-        "y": 1680,
+        "y": 1880,
         "wires": []
     },
     {
@@ -8561,7 +8633,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 400,
-        "y": 1560,
+        "y": 1760,
         "wires": [
             [
                 "03861f1917de04df"
@@ -8588,7 +8660,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1930,
-        "y": 2480,
+        "y": 2680,
         "wires": [
             [
                 "aeb87f3ae70b534d"
@@ -8617,7 +8689,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1940,
-        "y": 2560,
+        "y": 2760,
         "wires": [
             [
                 "3cfb5b52c12a7162"
@@ -8638,7 +8710,7 @@
         "finalize": "",
         "libs": [],
         "x": 510,
-        "y": 1480,
+        "y": 1680,
         "wires": [
             [
                 "7e24c5c34fdd420a"
@@ -8662,7 +8734,7 @@
         "finalize": "",
         "libs": [],
         "x": 430,
-        "y": 1920,
+        "y": 2120,
         "wires": [
             [
                 "c3d6f0bb540b7bac"
@@ -8683,7 +8755,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 2300,
+        "y": 2500,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8704,7 +8776,7 @@
         "finalize": "",
         "libs": [],
         "x": 1510,
-        "y": 2360,
+        "y": 2560,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8725,7 +8797,7 @@
         "finalize": "",
         "libs": [],
         "x": 1510,
-        "y": 2420,
+        "y": 2620,
         "wires": [
             [
                 "4a300ee35db77eae"
@@ -8746,12 +8818,265 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 680,
+        "y": 880,
         "wires": [
             [
                 "4a300ee35db77eae"
             ]
         ]
+    },
+    {
+        "id": "66f5969ca3a9f48c",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "config topic",
+        "func": "// uniq_id\nlet uniq_id = \"everhome_software_version\";\nmsg.uniq_id = uniq_id;\n\n// <discovery_prefix>/<component>/[<node_id>/]<object_id>/config\nlet discovery_prefix ='homeassistant';\nlet component = 'sensor';\nlet node_id ='everhome';\n\nlet prefix = 'config';\nlet topic = discovery_prefix + '/' + component + '/' + node_id + '/' + uniq_id + '/' + prefix;\nmsg.topic = topic;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 340,
+        "wires": [
+            [
+                "a87d899f6a0ff312"
+            ]
+        ]
+    },
+    {
+        "id": "a87d899f6a0ff312",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "Software Version",
+        "func": "let uniq_id = msg.uniq_id;\nlet obj_id = uniq_id;\n\nconst state_topic = \"everhome/central/installed_version\";\n\nconst configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.command;\n\nconst central_device_id = \"everhome_central\";\n\nlet icon = \"mdi:github\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": obj_id,\n    \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(\"installed_version\", global.get(\"language\")),\n    \"entity_category\": \"diagnostic\",\n    \"state_topic\": state_topic,\n    \"value_template\": \"{{ value_json['update']['installed_version'] }}\",\n    \"icon\" : icon,          \n    \"retain\": retain,  \n    \"dev\": {\n        \"ids\": [\n            central_device_id\n        ]\n    },\n    \"avty\": [\n        {\n            \"t\": \"everhome/central/state_connected/mqtt\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        }\n\n    ],\n    \"avty_mode\": \"all\"\n };\n\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "1ea03c0fdb17c030",
+                "07ccf8bc620e2eb5"
+            ]
+        ]
+    },
+    {
+        "id": "21b2ab539584aa23",
+        "type": "http request",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "releases",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.github.com/repos/DrHouseIT/everHome2MQTT/releases",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1940,
+        "y": 340,
+        "wires": [
+            [
+                "ea7e5c96d648bdcd"
+            ]
+        ]
+    },
+    {
+        "id": "3b13dfd3742ee528",
+        "type": "inject",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1800,
+        "y": 340,
+        "wires": [
+            [
+                "21b2ab539584aa23"
+            ]
+        ]
+    },
+    {
+        "id": "1d28dba444f8362e",
+        "type": "debug",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2220,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ea7e5c96d648bdcd",
+        "type": "json",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2090,
+        "y": 340,
+        "wires": [
+            [
+                "1d28dba444f8362e"
+            ]
+        ]
+    },
+    {
+        "id": "a1323e6c688d9be6",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "config topic",
+        "func": "// uniq_id\nlet uniq_id = \"everhome_software_update\";\nmsg.uniq_id = uniq_id;\n\n// <discovery_prefix>/<component>/[<node_id>/]<object_id>/config\nlet discovery_prefix ='homeassistant';\nlet component = 'update';\nlet node_id ='everhome';\n\nlet prefix = 'config';\nlet topic = discovery_prefix + '/' + component + '/' + node_id + '/' + uniq_id + '/' + prefix;\nmsg.topic = topic;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 520,
+        "wires": [
+            [
+                "ac44dc4abe0f30d8"
+            ]
+        ]
+    },
+    {
+        "id": "ac44dc4abe0f30d8",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "Software update",
+        "func": "let uniq_id = msg.uniq_id;\nlet obj_id = uniq_id;\n\nconst cmd_t = \"everhome/control/update_version\";\nconst latest_version_topic = \"everhome/central/latest_version\";\nconst state_topic = \"everhome/central/installed_version\";\n\nconst configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.command;\n\nconst central_device_id = \"everhome_central\";\n\nconst release_url = msg.latest_release.release_url;\nconst release_summary = msg.latest_release.release_summary;\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": obj_id, \n    \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(\"latest_version\", global.get(\"language\")),\n    \"entity_category\": \"config\",\n    \"device_class\": \"firmware\",\n    \"entity_picture\": \"https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png\",\n\n    \"latest_version_template\": \"{{ value_json['update']['latest_version'] }}\",\n    \"latest_version_topic\": latest_version_topic,\n\n    \"state_topic\": state_topic,\n    \"value_template\": \"{{ value_json['update']['installed_version'] }}\", \n\n    \"title\": \"everHome2MQTT\",\n\n    \"release_url\" : release_url,\n    \"release_summary\" : release_summary, \n          \n    \"retain\": retain,  \n    \"dev\": {\n        \"ids\": [\n            central_device_id\n        ]\n    },\n    \"avty\": [\n        {\n            \"t\": \"everhome/central/state_connected/mqtt\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        }\n\n    ],\n    \"avty_mode\": \"all\"\n };\n\nmsg.payload = payload;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 520,
+        "wires": [
+            [
+                "375d7b191f27a57a"
+            ]
+        ]
+    },
+    {
+        "id": "7d81a0d56f49f997",
+        "type": "link in",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "link in - Config Update",
+        "links": [
+            "4de184e3416236e9"
+        ],
+        "x": 545,
+        "y": 520,
+        "wires": [
+            [
+                "a1323e6c688d9be6"
+            ]
+        ]
+    },
+    {
+        "id": "375d7b191f27a57a",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "Retain Config",
+        "func": "const configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.config;\nmsg.retain = retain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 520,
+        "wires": [
+            [
+                "d0c1f06a67fd9c3b"
+            ]
+        ]
+    },
+    {
+        "id": "d0c1f06a67fd9c3b",
+        "type": "mqtt out",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "010c8dcccc60a718",
+        "x": 1390,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1231262c60967aa8",
+        "type": "comment",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": " Initial configuration",
+        "info": "",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "61493f861d06d207",
+        "type": "comment",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "Adaptive configuration",
+        "info": "",
+        "x": 700,
+        "y": 460,
+        "wires": []
     },
     {
         "id": "58dfceae4a681e65",
@@ -13304,6 +13629,310 @@
         "info": "",
         "x": 180,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "79e86f781487ccd3",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "latest_version",
+        "func": "const latest_version = {\n  update: {\n    latest_version: msg.payload.tag_name,\n  }\n};\n\nconst latest_release = {\n  release_url : msg.payload.html_url,\n  release_summary: msg.payload.name,\n};\n\nmsg.latest_release = latest_release;\n\nmsg.payload = latest_version;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            [
+                "fd6f69061c79d8e3",
+                "7a3c3981dd654b43"
+            ]
+        ]
+    },
+    {
+        "id": "41a761a0ca911504",
+        "type": "http request",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "request releases/latests",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 340,
+        "wires": [
+            [
+                "71e6f42c0e0f18dc"
+            ]
+        ]
+    },
+    {
+        "id": "7361e204aa4ce451",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "topic",
+        "func": "msg.topic = \"everhome/central/latest_version\"; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 340,
+        "wires": [
+            [
+                "4de184e3416236e9",
+                "a2f4b4e8d640647d"
+            ]
+        ]
+    },
+    {
+        "id": "5729cc35f5987f51",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "installed_version",
+        "func": "const installed_version = {\n  update: {\n    installed_version: global.get(\"sw_version\"),\n  }\n};\n\nmsg.payload = installed_version;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 140,
+        "wires": [
+            [
+                "21de7ae9c72cdbf1"
+            ]
+        ]
+    },
+    {
+        "id": "21de7ae9c72cdbf1",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "topic",
+        "func": "msg.topic = \"everhome/central/installed_version\"; \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1730,
+        "y": 140,
+        "wires": [
+            [
+                "a2f4b4e8d640647d"
+            ]
+        ]
+    },
+    {
+        "id": "2678d92597c9cf86",
+        "type": "mqtt out",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "010c8dcccc60a718",
+        "x": 2090,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7a3c3981dd654b43",
+        "type": "delay",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 260,
+        "wires": [
+            [
+                "e9a6ce0a849ea991"
+            ]
+        ]
+    },
+    {
+        "id": "fd6f69061c79d8e3",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "New Version?",
+        "func": "let previousRelease = flow.get(\"latest_release\") || {};\n\nif (JSON.stringify(msg.latest_release) !== JSON.stringify(previousRelease)) {\n    flow.set(\"latest_release\", msg.latest_release);\n    return msg;\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 340,
+        "wires": [
+            [
+                "7361e204aa4ce451"
+            ]
+        ]
+    },
+    {
+        "id": "4de184e3416236e9",
+        "type": "link out",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "link out  - Config Update",
+        "mode": "link",
+        "links": [
+            "7d81a0d56f49f997"
+        ],
+        "x": 1995,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e79bcad893f668ca",
+        "type": "link in",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "link in - Check Latest",
+        "links": [
+            "0487a6ea15b08097"
+        ],
+        "x": 95,
+        "y": 240,
+        "wires": [
+            [
+                "cf03e0fc66b00cc8",
+                "563fcfa07f5807ca"
+            ]
+        ]
+    },
+    {
+        "id": "cf03e0fc66b00cc8",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "flow.set(\"latest_release\",{});",
+        "func": "flow.set(\"latest_release\",{});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 340,
+        "wires": [
+            [
+                "e9a6ce0a849ea991"
+            ]
+        ]
+    },
+    {
+        "id": "a2f4b4e8d640647d",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "Retain State",
+        "func": "const configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.state;\nmsg.retain = retain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 240,
+        "wires": [
+            [
+                "2678d92597c9cf86"
+            ]
+        ]
+    },
+    {
+        "id": "e9a6ce0a849ea991",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "url releases/latests",
+        "func": "msg.url = \"https://api.github.com/repos/DrHouseIT/everHome2MQTT/releases/latest\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "41a761a0ca911504"
+            ]
+        ]
+    },
+    {
+        "id": "71e6f42c0e0f18dc",
+        "type": "function",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "statusCode releases/latests",
+        "func": "if ( msg.statusCode === 200 ){\n    return msg;\n}else{\n    node.error(`Error: ${msg.payload.message} | Status: ${msg.payload.status} | Documentation: ${msg.payload.documentation_url}`);\n    return null;\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 340,
+        "wires": [
+            [
+                "79e86f781487ccd3"
+            ]
+        ]
+    },
+    {
+        "id": "08b03cdebec5c821",
+        "type": "comment",
+        "z": "25ec8fb701364b85",
+        "g": "e0d4e80999f657f7",
+        "name": "Check Software Update",
+        "info": "",
+        "x": 180,
+        "y": 100,
         "wires": []
     }
 ]
