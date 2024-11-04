@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const WebSocket = require('ws');
 const axios = require('axios');
+const https = require('https');
 
 const app = express();
 const hostname = "0.0.0.0";
@@ -56,14 +57,15 @@ process.on('unhandledRejection', (reason, promise) => {
 
 const args = process.argv.slice(2);
 
-if (args.length !== 2) {
-    console.error('Please provide the following parameters in this order: restart-url, and server port.');
+if (args.length !== 3) {
+    console.error('Please provide the following parameters in this order: restart-url, alive-url and server port.');
     console.log('The process (server) is being terminated due to missing parameters.');
     process.exit(2);
 }
 
 const restartUrl = args[0];
-const port = args[1];
+const aliveUrl = args[1];
+const port = args[2];
 
 let urlIsValid = false;
 try {
@@ -76,6 +78,20 @@ try {
 if (!urlIsValid) {
     console.error(`Invalid restart-url: ${restartUrl}`);
     console.log('The process (server) is being terminated due to invalid restart-url.');
+    process.exit(3);
+}
+
+let aliveUrlIsValid = false;
+try {
+    new URL(aliveUrl);
+    aliveUrlIsValid = true;
+} catch (err) {
+    aliveUrlIsValid = false;
+}
+
+if (!aliveUrlIsValid) {
+    console.error(`Invalid alive-url: ${aliveUrl}`);
+    console.log('The process (server) is being terminated due to invalid alive-url.');
     process.exit(3);
 }
 
@@ -748,7 +764,7 @@ app.post('/ws', (req, res) => {
             }
             writeMessageHistoryToFile();
 
-            sendToOtherEndpoint(jsonData)
+            forwardToNodeRed(jsonData)
                 .then(response => {
                     // handle response if needed
                 })
@@ -801,9 +817,35 @@ app.get('/status', (req, res) => {
     });
 });
 
-async function sendToOtherEndpoint(data) {
-    return await axios.post(postbackUrl, data);
-}
+
+// HTTPS-Agent mit `rejectUnauthorized: false` erstellen
+const httpsAgent = new https.Agent({
+    rejectUnauthorized: false
+  });
+
+// Endpunkt /alive
+app.get('/alive', async (req, res) => {
+    try {
+      // Sende eine POST-Anfrage an aliveUrl mit dem unsicheren HTTPS-Agent
+      const response = await axios.post(aliveUrl, {}, { httpsAgent });
+      
+      // Falls erfolgreich, gib die Antwort vom aliveUrl-Endpunkt zurück
+      res.status(200).json({
+        message: 'Alive check erfolgreich gesendet',
+        data: response.data,
+      });
+    } catch (error) {
+      // Fehlerbehandlung
+      res.status(500).json({
+        message: 'Fehler beim Alive-Check',
+        error: error.message,
+      });
+    }
+  });
+
+  async function forwardToNodeRed(data) {
+    return await axios.post(postbackUrl, data, { httpsAgent });
+  }
 
 async function restartEndpoint(data) {
     return await axios.post(restartUrl, data);

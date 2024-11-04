@@ -778,11 +778,20 @@
             "046850a87a658ff4",
             "f6a3fb8528998ec2",
             "cc76ee9e2b84b5d9",
-            "88660bd4c74eb21b"
+            "88660bd4c74eb21b",
+            "acd9a00f84e2516e",
+            "ecaf3587b5a7352c",
+            "91bff053ed5b756d",
+            "7c35215a29881d73",
+            "308e63a0926e75ec",
+            "efc86a103f0edc27",
+            "a3f3867951066f75",
+            "cafa420a23c4aa30",
+            "a6932a482c8474c8"
         ],
         "x": 54,
         "y": 59,
-        "w": 2072,
+        "w": 2092,
         "h": 1502
     },
     {
@@ -826,12 +835,14 @@
             "375d7b191f27a57a",
             "d0c1f06a67fd9c3b",
             "1231262c60967aa8",
-            "61493f861d06d207"
+            "61493f861d06d207",
+            "4b604223e0ec2a54",
+            "6f3b9e4c77d8097e"
         ],
         "x": 54,
         "y": 59,
         "w": 2292,
-        "h": 502
+        "h": 562
     },
     {
         "id": "ebad0b280b30e495",
@@ -1327,7 +1338,7 @@
             "ebdaf1719065aaba"
         ],
         "x": 54,
-        "y": 1419,
+        "y": 1839,
         "w": 2212,
         "h": 1142
     },
@@ -1474,7 +1485,7 @@
             "cbe9c4064b18d171"
         ],
         "x": 54,
-        "y": 2599,
+        "y": 3019,
         "w": 1572,
         "h": 282
     },
@@ -1502,7 +1513,7 @@
             "b90bacb4c839bf08"
         ],
         "x": 54,
-        "y": 2919,
+        "y": 3339,
         "w": 972,
         "h": 222
     },
@@ -1543,111 +1554,41 @@
         "h": 322
     },
     {
+        "id": "ebbb4f3bee015cdb",
+        "type": "group",
+        "z": "4c7024461c6c9a94",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f7bb205fc99c130e",
+            "72db2b250d52b87f",
+            "37993cef1f4846d8",
+            "57b4d8fc128d561b",
+            "0b455ee3e50e3607",
+            "34c0d6fc8c8aa911",
+            "359edf4b9ed9dfaf",
+            "eaf2688496004d63",
+            "2c360bfe90a5f324",
+            "9936551d3a084570",
+            "45a27b5a44f3ca14",
+            "5399190e70ec39c9",
+            "83467e82c3482e4d",
+            "4827cd5ae68d86eb"
+        ],
+        "x": 54,
+        "y": 1419,
+        "w": 1572,
+        "h": 382
+    },
+    {
         "id": "8502b8640b5d2af5",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 1720,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "bdcb145ad347384d",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 1480,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "90e5a490195a0609",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 1540,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "6eb6e455079f25ae",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 1960,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "807d841973018fb8",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 2400,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "59fae3a613178a6b",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 2200,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "b0acf82f76e764e5",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 2020,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "61770934f35e7b7f",
-        "type": "junction",
-        "z": "4c7024461c6c9a94",
-        "g": "bfb0edcd0febbe3e",
-        "x": 1680,
-        "y": 2080,
-        "wires": [
-            [
-                "29eebf99226b1b21"
-            ]
-        ]
-    },
-    {
-        "id": "22e7b58ba0bc15dc",
         "type": "junction",
         "z": "4c7024461c6c9a94",
         "g": "bfb0edcd0febbe3e",
@@ -1660,12 +1601,116 @@
         ]
     },
     {
+        "id": "bdcb145ad347384d",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 1900,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "90e5a490195a0609",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 1960,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "6eb6e455079f25ae",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2380,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "807d841973018fb8",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2820,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "59fae3a613178a6b",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2620,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "b0acf82f76e764e5",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2440,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "61770934f35e7b7f",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2500,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
+        "id": "22e7b58ba0bc15dc",
+        "type": "junction",
+        "z": "4c7024461c6c9a94",
+        "g": "bfb0edcd0febbe3e",
+        "x": 1680,
+        "y": 2560,
+        "wires": [
+            [
+                "29eebf99226b1b21"
+            ]
+        ]
+    },
+    {
         "id": "667d2a270b70eb62",
         "type": "junction",
         "z": "4c7024461c6c9a94",
         "g": "bfb0edcd0febbe3e",
         "x": 1680,
-        "y": 1860,
+        "y": 2280,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -1678,7 +1723,7 @@
         "z": "4c7024461c6c9a94",
         "g": "bfb0edcd0febbe3e",
         "x": 1680,
-        "y": 2260,
+        "y": 2680,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -4370,7 +4415,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "523ad0dd6fd4a780",
         "name": "Prepare Device Data",
-        "func": "function findeNameById(array, id) {\n    for (let i = 0; i < array.length; i++) {\n        if (array[i].id === id) {\n            return array[i].name;\n        }\n    }\n    return ''; \n}\nfunction formatString(inputString, variables) {\n  var regex = /<([^>]+)>/g;\n  var result = inputString.replace(regex, function(match, placeholder) {\n    return variables[placeholder] !== undefined ? variables[placeholder] : '';\n  });\n  return result;\n}\n\nfunction findGatewayId(devices, deviceid) {\n    for (let i = 0; i < devices.length; i++) {\n        if (devices[i].id === deviceid) {\n            return devices[i].gatewayid;\n        }\n    }\n    return null;\n}\nconst findValueByKey = (properties, keyToFind, defaultValue) => {\n    if (properties === undefined || properties === null) {\n        return defaultValue !== undefined ? defaultValue : 'unknown value - no default';\n    }\n    const foundObject = properties.find(item => item.key === keyToFind);\n    return foundObject ? foundObject.value : (defaultValue !== undefined ? defaultValue : 'unknown value - no default');\n};\n\nlet rooms = global.get('rooms');\nconst configuration = global.get('configuration');\n\n// add simu devices\nif (global.get(\"add_simu_devices\")) {\n    const merged_devices = global.get(\"devices\").concat(global.get(\"simu_devices\"));\n    global.set('devices', merged_devices);\n}\nlet devices = global.get('devices');\n\n// create availability list\ndevices = global.get('devices');\nlet avty_states_connected = [];\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/websocket\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/mqtt\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\n\n// add availability list to devices \ndevices.forEach(function(element) {\n    element.config = {};\n    const avty = [...avty_states_connected];\n\n    // add availability for gateway - device\n    // Sometimes the EcoTracker (product ID 414) has a gateway ID. This is a bug that needs to be ignored.\n    if (!element.entities && element.gatewayid && element.productid !== 414 ) {\n        const newEntry = {\n            \"t\": `everhome/device/${element.gatewayid}/states/connected`,\n            \"val_tpl\": `{{'online' if value_json.value == true else 'offline'}}`\n        };\n        if (!avty.some(item => item.t === newEntry.t && item.val_tpl === newEntry.val_tpl)) {\n            avty.push(newEntry);\n        }\n    }\n\n    // add availability for Ecotracker - device\n    if (element.productid === 414) {\n        const newEntry = {\n            \"t\": `everhome/device/${element.id}/states/connected`,\n            \"val_tpl\": `{{'online' if value_json.value == true else 'offline'}}`\n        };\n        if (!avty.some(item => item.t === newEntry.t && item.val_tpl === newEntry.val_tpl)) {\n            avty.push(newEntry);\n        }\n    }\n    element.config.avty = avty;\n});\n\n// add manufacturer & model\ndevices.forEach(function(element) {\n    const set_object_id = configuration.devices.set_object_id;\n    const language = global.get('language');\n    element.set_object_id = set_object_id;\n\n    element.device_id = `everhome_${element.type}_${element.id}`;\n    element.uniq_id_main = `everhome_${element.type}_id_${element.id}`;\n\n    element.room_name = findeNameById(rooms, element.roomid);\n    \n    var variables = {\n        room_name: element.room_name,\n        device_name: element.name\n    };\n    const inputString = configuration.devices?.naming ?? element.room_name + \" - \" + element.name;\n    element.device_name = formatString(inputString, variables);\n    \n    element.language = language;\n    \n    if (element.type === 'device'){\n        element.manufacturer = findValueByKey(element.properties, 'manufacturername', 'unknow manufacturername');\n        element.model = findValueByKey(element.properties, 'productname', 'unknow productname');\n\n        if (element.subtype === \"gateway\" || element.productid === 414) { // gateway or EcoTracker \n            const central_device_id = \"everhome_central\";\n            element.via_device = central_device_id;\n        }else{\n            element.via_device = `everhome_device_${element.gatewayid}`;\n        }        \n        element.main_topic = \"everhome/device\";\n    }  \n\n    if (element.subtype === 'motiondetector' ){\n        element.states.motion = false;\n    }\n\n    if (element.subtype === 'sender') {\n        element.states.action = null;    \n    }\n});\n\n// remove excluded devices\nlet deviceToRemove = [];\ndevices.forEach(function (element, index) {\n    if (configuration.devices.exclude.some(excludeItem => excludeItem.subtype === element.subtype)) {\n        deviceToRemove.push(index);\n    }\n});\ndeviceToRemove.reverse().forEach(function (index) {\n    devices.splice(index, 1);\n});\n\nglobal.set('devices', devices);\n\nmsg.payload = devices;\n\nreturn msg;\n\n",
+        "func": "function findeNameById(array, id) {\n    for (let i = 0; i < array.length; i++) {\n        if (array[i].id === id) {\n            return array[i].name;\n        }\n    }\n    return ''; \n}\nfunction formatString(inputString, variables) {\n  var regex = /<([^>]+)>/g;\n  var result = inputString.replace(regex, function(match, placeholder) {\n    return variables[placeholder] !== undefined ? variables[placeholder] : '';\n  });\n  return result;\n}\n\nfunction findGatewayId(devices, deviceid) {\n    for (let i = 0; i < devices.length; i++) {\n        if (devices[i].id === deviceid) {\n            return devices[i].gatewayid;\n        }\n    }\n    return null;\n}\nconst findValueByKey = (properties, keyToFind, defaultValue) => {\n    if (properties === undefined || properties === null) {\n        return defaultValue !== undefined ? defaultValue : 'unknown value - no default';\n    }\n    const foundObject = properties.find(item => item.key === keyToFind);\n    return foundObject ? foundObject.value : (defaultValue !== undefined ? defaultValue : 'unknown value - no default');\n};\n\nlet rooms = global.get('rooms');\nconst configuration = global.get('configuration');\n\n// add simu devices\nif (global.get(\"add_simu_devices\")) {\n    const merged_devices = global.get(\"devices\").concat(global.get(\"simu_devices\"));\n    global.set('devices', merged_devices);\n}\nlet devices = global.get('devices');\n\n// create availability list\ndevices = global.get('devices');\nlet avty_states_connected = [];\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/websocket\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/node_red\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/mqtt\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\n\n// add availability list to devices \ndevices.forEach(function(element) {\n    element.config = {};\n    const avty = [...avty_states_connected];\n\n    // add availability for gateway - device\n    // Sometimes the EcoTracker (product ID 414) has a gateway ID. This is a bug that needs to be ignored.\n    if (!element.entities && element.gatewayid && element.productid !== 414 ) {\n        const newEntry = {\n            \"t\": `everhome/device/${element.gatewayid}/states/connected`,\n            \"val_tpl\": `{{'online' if value_json.value == true else 'offline'}}`\n        };\n        if (!avty.some(item => item.t === newEntry.t && item.val_tpl === newEntry.val_tpl)) {\n            avty.push(newEntry);\n        }\n    }\n\n    // add availability for Ecotracker - device\n    if (element.productid === 414) {\n        const newEntry = {\n            \"t\": `everhome/device/${element.id}/states/connected`,\n            \"val_tpl\": `{{'online' if value_json.value == true else 'offline'}}`\n        };\n        if (!avty.some(item => item.t === newEntry.t && item.val_tpl === newEntry.val_tpl)) {\n            avty.push(newEntry);\n        }\n    }\n    element.config.avty = avty;\n});\n\n// add manufacturer & model\ndevices.forEach(function(element) {\n    const set_object_id = configuration.devices.set_object_id;\n    const language = global.get('language');\n    element.set_object_id = set_object_id;\n\n    element.device_id = `everhome_${element.type}_${element.id}`;\n    element.uniq_id_main = `everhome_${element.type}_id_${element.id}`;\n\n    element.room_name = findeNameById(rooms, element.roomid);\n    \n    var variables = {\n        room_name: element.room_name,\n        device_name: element.name\n    };\n    const inputString = configuration.devices?.naming ?? element.room_name + \" - \" + element.name;\n    element.device_name = formatString(inputString, variables);\n    \n    element.language = language;\n    \n    if (element.type === 'device'){\n        element.manufacturer = findValueByKey(element.properties, 'manufacturername', 'unknow manufacturername');\n        element.model = findValueByKey(element.properties, 'productname', 'unknow productname');\n\n        if (element.subtype === \"gateway\" || element.productid === 414) { // gateway or EcoTracker \n            const central_device_id = \"everhome_central\";\n            element.via_device = central_device_id;\n        }else{\n            element.via_device = `everhome_device_${element.gatewayid}`;\n        }        \n        element.main_topic = \"everhome/device\";\n    }  \n\n    if (element.subtype === 'motiondetector' ){\n        element.states.motion = false;\n    }\n\n    if (element.subtype === 'sender') {\n        element.states.action = null;    \n    }\n});\n\n// remove excluded devices\nlet deviceToRemove = [];\ndevices.forEach(function (element, index) {\n    if (configuration.devices.exclude.some(excludeItem => excludeItem.subtype === element.subtype)) {\n        deviceToRemove.push(index);\n    }\n});\ndeviceToRemove.reverse().forEach(function (index) {\n    devices.splice(index, 1);\n});\n\nglobal.set('devices', devices);\n\nmsg.payload = devices;\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4668,7 +4713,7 @@
         "property": "payload",
         "name": "",
         "x": 1110,
-        "y": 300,
+        "y": 460,
         "wires": [
             [
                 "c63f7420338ed62d"
@@ -4689,9 +4734,11 @@
         "finalize": "",
         "libs": [],
         "x": 1580,
-        "y": 300,
+        "y": 460,
         "wires": [
-            []
+            [
+                "89fe6463d017eb51"
+            ]
         ]
     },
     {
@@ -5236,7 +5283,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "validate",
-        "func": "function isInRange(num, min, max) {\n    return num >= min && num <= max;\n}\nfunction convertToBoolean(input) {\n    if (!isNaN(parseInt(input))) {\n        return parseInt(input) === 1 ? true : (parseInt(input) === 0 ? false : null);\n    }\n    input = input.trim();\n    if (input === \"true\") {\n        return true;\n    } else if (input === \"false\") {\n        return false;\n    } else {\n        return null;\n    }\n}\nfunction isEmptyObject(obj) {\n    for (var key in obj) {\n        if (obj.hasOwnProperty(key)) {\n            return false;\n        }\n    }\n    return true;\n}\n\nconst MIN_PORT = 0;\nconst MAX_PORT = 65535;\nconst MIN_SCAN_INTERVAL = 1;\nconst MAX_SCAN_INTERVAL = 600;\nconst MIN_RESET_AFTER = 1;\nconst MAX_RESET_AFTER = 600;\nconst MIN_STOP_TIME = 5;\nconst MAX_STOP_TIME = 30;\n\nlet boolean_value = \"\";\nlet struct = \"\";\n\nfunction validateYAML(config, defaultConfig) {\n\n    // config.language\n    if (!config.language) {\n        config.language = defaultConfig.language;\n        node.log(\"config.language not found, setting default configuration.\");\n    }\n\n    // config.language - check if valide\n    if (![\"en\", \"de\", \"fr\"].includes(config.language)) {\n        config.language = defaultConfig.language;\n        node.log(\"language not valide (allowed: en | de | fr), setting default configuration.\");\n    }\n\n    // ports\n    if (typeof config.ports !== 'object') {\n        config.ports = defaultConfig.ports;\n        node.log(\"ports is not an object, setting default configuration.\");\n    }\n\n    // ports.everHome2MQTT\n    if (!config.ports.everHome2MQTT) {\n        config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n        node.log(\"ports.everHome2MQTT not found, setting default configuration.\");\n    }\n\n    // ports.everHome2MQTT - isInteger\n    if (!Number.isInteger(config.ports.everHome2MQTT)) {\n\n        let value = parseInt(config.ports.everHome2MQTT);\n        if (!isNaN(value)) {\n            config.ports.everHome2MQTT = value;\n        } else {\n            config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n            node.log(`ports.everHome2MQTT is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // ports.everHome2MQTT - isInRange\n    if (!isInRange(config.ports.everHome2MQTT, MIN_PORT, MAX_PORT)) {\n        config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n        node.log(`ports.everHome2MQTT is out of range. Min = ${MIN_PORT} | Max = ${MAX_PORT}. Value was set to default configuration.`);\n    }\n\n    // ports.nodeRed\n    if (!config.ports.nodeRed) {\n        config.ports.nodeRed = defaultConfig.ports.nodeRed;\n        node.log(\"ports.nodeRed not found, setting default configuration.\");\n    }\n\n    // ports.nodeRed - isInteger\n    if (!Number.isInteger(config.ports.nodeRed)) {\n\n        let value = parseInt(config.ports.nodeRed);\n        if (!isNaN(value)) {\n            config.ports.nodeRed = value;\n        } else {\n            config.ports.nodeRed = defaultConfig.ports.nodeRed;\n            node.log(`ports.nodeRed is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // ports.nodeRed - isInRange\n    if (!isInRange(config.ports.nodeRed, MIN_PORT, MAX_PORT)) {\n        config.ports.nodeRed = defaultConfig.ports.nodeRed;\n        node.log(`ports.nodeRed is out of range. Min = ${MIN_PORT} | Max = ${MAX_PORT}. Value was set to default configuration.`);\n    }\n\n    // websocket\n    if (typeof config.websocket !== 'object') {\n        config.websocket = defaultConfig.websocket;\n        node.log(\"websocket is not an object, setting default configuration.\");\n    }\n\n    // websocket.scan_interval\n    if (!config.websocket.scan_interval) {\n        config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n        node.log(\"websocket.scan_interval not found, setting default configuration.\");\n    }\n\n    // websocket.scan_interval - isInteger\n    if (!Number.isInteger(config.websocket.scan_interval)) {\n\n        let value = parseInt(config.websocket.scan_interval);\n        if (!isNaN(value)) {\n            config.websocket.scan_interval = value;\n        } else {\n            config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n            node.log(`websocket.scan_interval is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // websocket.scan_interval - isInRange\n    if (!isInRange(config.websocket.scan_interval, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n        config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n        node.log(`websocket.scan_interval is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default configuration.`);\n    }\n\n    // mqtt\n    if (typeof config.mqtt !== 'object') {\n        config.mqtt = defaultConfig.mqtt;\n        node.log(\"mqtt is not an object, setting default configuration.\");\n    }\n\n    // mqtt.scan_interval\n    if (!config.mqtt.scan_interval) {\n        config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n        node.log(\"mqtt.scan_interval not found, setting default configuration.\");\n    }\n\n    // mqtt.scan_interval - isInteger\n    if (!Number.isInteger(config.mqtt.scan_interval)) {\n\n        let value = parseInt(config.mqtt.scan_interval);\n        if (!isNaN(value)) {\n            config.mqtt.scan_interval = value;\n        } else {\n            config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n            node.log(`mqtt.scan_interval is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // mqtt.scan_interval - isInRange\n    if (!isInRange(config.mqtt.scan_interval, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n        config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n        node.log(`mqtt.scan_interval is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default configuration.`);\n    }\n\n    // mqtt.retain\n    if (typeof config.mqtt.retain !== 'object') {\n        config.mqtt.retain = defaultConfig.mqtt.retain;\n        node.log(\"mqtt.retain is not an object, setting default configuration.\");\n    }\n\n    // mqtt.retain.topics\n    if (typeof config.mqtt.retain.topics !== 'object') {\n        config.mqtt.retain.topics = defaultConfig.mqtt.retain.topics;\n        node.log(\"mqtt.retain.topics is not an object, setting default configuration.\");\n    }\n\n    // mqtt.retain.topics.config\n    boolean_value = \"config\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.config\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // mqtt.retain.topics.state\n    boolean_value = \"state\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.state\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // mqtt.retain.topics.command\n    boolean_value = \"command\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.command\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices\n    if (typeof config.devices !== 'object') {\n        config.devices = defaultConfig.devices;\n        node.log(\"devices is not an object, setting default configuration.\");\n    }\n\n    // devices.naming\n    if (config.devices.naming === undefined) {\n        config.devices.naming = defaultConfig.devices.naming;\n        node.log(\"devices.naming is undefined, setting default configuration.\");\n    }\n\n    // devices.naming\n    if (typeof config.devices.naming !== 'string') {\n        config.devices.naming = defaultConfig.devices.naming;\n        node.log(\"devices.naming is not an String, setting default configuration.\");\n    }\n\n    // devices.set_object_id\n    boolean_value = \"set_object_id\";\n    if (config.devices[boolean_value] === undefined) {\n        config.devices[boolean_value] = defaultConfig.devices[boolean_value];\n        node.log(`config.devices.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // devices.set_object_id\n    if (typeof config.devices[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.devices[boolean_value]);\n        if (test_boolean !== null) {\n            config.devices[boolean_value] = test_boolean;\n        } else {\n            config.devices[boolean_value] = defaultConfig.devices[boolean_value];\n            node.log(`config.devices.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype\n    if (typeof config.devices.subtype !== 'object') {\n        config.devices.subtype = defaultConfig.devices.subtype;\n        node.log(\"devices.subtype is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.cover\n    if (typeof config.devices.subtype.cover !== 'object') {\n        config.devices.subtype.cover = defaultConfig.devices.subtype.cover;\n        node.log(\"devices.subtype.cover is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.cover.toggle_stop_time\n    if (!config.devices.subtype.cover.toggle_stop_time) {\n        config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n        node.log(\"devices.subtype.cover.toggle_stop_time not found, setting default configuration.\");\n    }\n\n    // devices.subtype.cover.toggle_stop_time - isInteger\n    if (!Number.isInteger(config.devices.subtype.cover.toggle_stop_time)) {\n\n        let value = parseInt(config.devices.subtype.cover.toggle_stop_time);\n        if (!isNaN(value)) {\n            config.devices.subtype.cover.toggle_stop_time = value;\n        } else {\n            config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n            node.log(`devices.subtype.cover.toggle_stop_time is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype.cover.toggle_stop_time - isInRange\n    if (!isInRange(config.devices.subtype.cover.toggle_stop_time, MIN_STOP_TIME, MAX_STOP_TIME)) {\n        config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n        node.log(`devices.subtype.cover.toggle_stop_time is out of range. Min = ${MIN_STOP_TIME} | Max = ${MAX_STOP_TIME}. Value was set to default configuration.`);\n    }    \n\n    // devices.subtype.motiondetector\n    if (typeof config.devices.subtype.motiondetector !== 'object') {\n        config.devices.subtype.motiondetector = defaultConfig.devices.subtype.motiondetector;\n        node.log(\"devices.subtype.motiondetector is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after\n    if (typeof config.devices.subtype.motiondetector.reset_after !== 'object') {\n        config.devices.subtype.motiondetector.reset_after = defaultConfig.devices.subtype.motiondetector.reset_after;\n        node.log(\"devices.subtype.motiondetector.reset_after is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after.device_id    \n    if (!Array.isArray(config.devices.subtype.motiondetector.reset_after.device_id)) {\n        config.devices.subtype.motiondetector.reset_after.device_id = defaultConfig.devices.subtype.motiondetector.reset_after.device_id;\n        node.log(\"devices.subtype.motiondetector.reset_after.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - id isInteger\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.motiondetector.reset_after.device_id.splice(index, 1);\n                node.log(`motiondetector.reset_after.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value isInteger\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.value)) {\n            let value = parseInt(element.value);\n            if (!isNaN(value)) {\n                element.value = value;\n            } else {\n                node.log(`devices.subtype.motiondetector.reset_after.device_id[${index}].value ${element.value} of id ${element.id} is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n                element.value = defaultConfig.devices.subtype.motiondetector.reset_after.default_value;\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value out of range\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!isInRange(element.value, MIN_RESET_AFTER, MAX_RESET_AFTER)) {\n            node.log(`motiondetector.reset_after.device_id[${index}].value ${element.value} of id ${element.id} is out of range. Min = ${MIN_RESET_AFTER} | Max = ${MAX_RESET_AFTER}. Value was set to default value.`);\n            element.value = defaultConfig.devices.subtype.motiondetector.reset_after.default_value;\n        }\n    });\n\n    // devices.subtype.electricitymeter\n    if (typeof config.devices.subtype.electricitymeter !== 'object') {\n        config.devices.subtype.electricitymeter = defaultConfig.devices.subtype.electricitymeter;\n        node.log(\"devices.subtype.electricitymeter is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker\n    if (typeof config.devices.subtype.electricitymeter.ecotracker !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker = defaultConfig.devices.subtype.electricitymeter.ecotracker;\n        node.log(\"devices.subtype.electricitymeter.ecotracker is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker)) {\n        config.devices.subtype.electricitymeter.ecotracker = defaultConfig.devices.subtype.electricitymeter.ecotracker;\n        node.log(\"devices.subtype.electricitymeter.ecotracker is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.activated !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api.activated)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id\n    if (!Array.isArray(config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id  - Array - id isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.splice(index, 1);\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id  - Array - value not valid boolean\n    config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.forEach(function (element, index) {\n        if (typeof element.value !== 'boolean') {\n            const test_boolean = convertToBoolean(element.value);\n            if (test_boolean !== null) {\n                element.value = test_boolean;\n            } else {\n                element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated.default_value;\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id[${index}].value is not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n            }\n        }\n    });\n\n    // mqtt.retain.topics.config\n    boolean_value = \"default_value\";\n    if (config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] === undefined) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value];\n        node.log(`config.devices.subtype.electricitymeter.ecotracker.local_api.activated.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    boolean_value = \"default_value\";\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.default_value\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value]);\n        if (test_boolean !== null) {\n            config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = test_boolean;\n        } else {\n            config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value];\n            node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id\n    if (!Array.isArray(config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id  - Array - id isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.splice(index, 1);\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id  - Array - value isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.value)) {\n            let value = parseInt(element.value);\n            if (!isNaN(value)) {\n                element.value = value;\n            } else {\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].value ${element.value} of id ${element.id} is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n                element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.default_value;\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value out of range\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!isInRange(element.value, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n            node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].value ${element.value} of id ${element.id} is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default value.`);\n            element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.default_value;\n        }\n    });\n\n    // devices.exclude   \n    if (!Array.isArray(config.devices.exclude)) {\n        config.devices.exclude = [];\n        node.log(\"devices.exclude is not an array, setting empty configuration.\");\n    }\n\n    return config;\n}\n\nconst config_input = msg.payload;\nconst config_input_stringify = (JSON.stringify(config_input));\n\nconst defaultConfig = global.get(\"defaultConfig\");\nconst config_output = validateYAML(config_input, defaultConfig);\nconst config_output_stringify = (JSON.stringify(config_input));\n\nif (config_input_stringify === config_output_stringify) {\n    msg.config_changed = false;\n    //node.log(\"The Configuration has not been changed.\");\n} else {\n    msg.config_changed = true;\n    node.log(\"The Configuration has been changed.\");\n}\n\nmsg.payload = config_output;\nreturn msg;\n",
+        "func": "function isInRange(num, min, max) {\n    return num >= min && num <= max;\n}\nfunction convertToBoolean(input) {\n    if (!isNaN(parseInt(input))) {\n        return parseInt(input) === 1 ? true : (parseInt(input) === 0 ? false : null);\n    }\n    input = input.trim();\n    if (input === \"true\") {\n        return true;\n    } else if (input === \"false\") {\n        return false;\n    } else {\n        return null;\n    }\n}\nfunction isEmptyObject(obj) {\n    for (var key in obj) {\n        if (obj.hasOwnProperty(key)) {\n            return false;\n        }\n    }\n    return true;\n}\n\nconst MIN_PORT = 0;\nconst MAX_PORT = 65535;\nconst MIN_SCAN_INTERVAL = 1;\nconst MAX_SCAN_INTERVAL = 600;\nconst MIN_RESET_AFTER = 1;\nconst MAX_RESET_AFTER = 600;\nconst MIN_STOP_TIME = 5;\nconst MAX_STOP_TIME = 30;\n\nlet boolean_value = \"\";\nlet struct = \"\";\n\nfunction validateYAML(config, defaultConfig) {\n\n    // config.language\n    if (!config.language) {\n        config.language = defaultConfig.language;\n        node.log(\"config.language not found, setting default configuration.\");\n    }\n\n    // config.language - check if valide\n    if (![\"en\", \"de\", \"fr\"].includes(config.language)) {\n        config.language = defaultConfig.language;\n        node.log(\"language not valide (allowed: en | de | fr), setting default configuration.\");\n    }\n\n    // ports\n    if (typeof config.ports !== 'object') {\n        config.ports = defaultConfig.ports;\n        node.log(\"ports is not an object, setting default configuration.\");\n    }\n\n    // ports.everHome2MQTT\n    if (!config.ports.everHome2MQTT) {\n        config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n        node.log(\"ports.everHome2MQTT not found, setting default configuration.\");\n    }\n\n    // ports.everHome2MQTT - isInteger\n    if (!Number.isInteger(config.ports.everHome2MQTT)) {\n\n        let value = parseInt(config.ports.everHome2MQTT);\n        if (!isNaN(value)) {\n            config.ports.everHome2MQTT = value;\n        } else {\n            config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n            node.log(`ports.everHome2MQTT is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // ports.everHome2MQTT - isInRange\n    if (!isInRange(config.ports.everHome2MQTT, MIN_PORT, MAX_PORT)) {\n        config.ports.everHome2MQTT = defaultConfig.ports.everHome2MQTT;\n        node.log(`ports.everHome2MQTT is out of range. Min = ${MIN_PORT} | Max = ${MAX_PORT}. Value was set to default configuration.`);\n    }\n\n    // ports.nodeRed\n    if (!config.ports.nodeRed) {\n        config.ports.nodeRed = defaultConfig.ports.nodeRed;\n        node.log(\"ports.nodeRed not found, setting default configuration.\");\n    }\n\n    // ports.nodeRed - isInteger\n    if (!Number.isInteger(config.ports.nodeRed)) {\n\n        let value = parseInt(config.ports.nodeRed);\n        if (!isNaN(value)) {\n            config.ports.nodeRed = value;\n        } else {\n            config.ports.nodeRed = defaultConfig.ports.nodeRed;\n            node.log(`ports.nodeRed is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // ports.nodeRed - isInRange\n    if (!isInRange(config.ports.nodeRed, MIN_PORT, MAX_PORT)) {\n        config.ports.nodeRed = defaultConfig.ports.nodeRed;\n        node.log(`ports.nodeRed is out of range. Min = ${MIN_PORT} | Max = ${MAX_PORT}. Value was set to default configuration.`);\n    }\n\n    // websocket\n    if (typeof config.websocket !== 'object') {\n        config.websocket = defaultConfig.websocket;\n        node.log(\"websocket is not an object, setting default configuration.\");\n    }\n\n    // websocket.scan_interval\n    if (!config.websocket.scan_interval) {\n        config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n        node.log(\"websocket.scan_interval not found, setting default configuration.\");\n    }\n\n    // websocket.scan_interval - isInteger\n    if (!Number.isInteger(config.websocket.scan_interval)) {\n\n        let value = parseInt(config.websocket.scan_interval);\n        if (!isNaN(value)) {\n            config.websocket.scan_interval = value;\n        } else {\n            config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n            node.log(`websocket.scan_interval is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // websocket.scan_interval - isInRange\n    if (!isInRange(config.websocket.scan_interval, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n        config.websocket.scan_interval = defaultConfig.websocket.scan_interval;\n        node.log(`websocket.scan_interval is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default configuration.`);\n    }\n\n    // node_red\n    if (typeof config.node_red !== 'object') {\n        config.node_red = defaultConfig.node_red;\n        node.log(\"node_red is not an object, setting default configuration.\");\n    }\n\n    // node_red.scan_interval\n    if (!config.node_red.scan_interval) {\n        config.node_red.scan_interval = defaultConfig.node_red.scan_interval;\n        node.log(\"node_red.scan_interval not found, setting default configuration.\");\n    }\n\n    // node_red.scan_interval - isInteger\n    if (!Number.isInteger(config.node_red.scan_interval)) {\n\n        let value = parseInt(config.node_red.scan_interval);\n        if (!isNaN(value)) {\n            config.node_red.scan_interval = value;\n        } else {\n            config.node_red.scan_interval = defaultConfig.node_red.scan_interval;\n            node.log(`node_red.scan_interval is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // node_red.scan_interval - isInRange\n    if (!isInRange(config.node_red.scan_interval, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n        config.node_red.scan_interval = defaultConfig.node_red.scan_interval;\n        node.log(`node_red.scan_interval is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default configuration.`);\n    }\n\n    // mqtt\n    if (typeof config.mqtt !== 'object') {\n        config.mqtt = defaultConfig.mqtt;\n        node.log(\"mqtt is not an object, setting default configuration.\");\n    }\n\n    // mqtt.scan_interval\n    if (!config.mqtt.scan_interval) {\n        config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n        node.log(\"mqtt.scan_interval not found, setting default configuration.\");\n    }\n\n    // mqtt.scan_interval - isInteger\n    if (!Number.isInteger(config.mqtt.scan_interval)) {\n\n        let value = parseInt(config.mqtt.scan_interval);\n        if (!isNaN(value)) {\n            config.mqtt.scan_interval = value;\n        } else {\n            config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n            node.log(`mqtt.scan_interval is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // mqtt.scan_interval - isInRange\n    if (!isInRange(config.mqtt.scan_interval, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n        config.mqtt.scan_interval = defaultConfig.mqtt.scan_interval;\n        node.log(`mqtt.scan_interval is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default configuration.`);\n    }\n\n    // mqtt.retain\n    if (typeof config.mqtt.retain !== 'object') {\n        config.mqtt.retain = defaultConfig.mqtt.retain;\n        node.log(\"mqtt.retain is not an object, setting default configuration.\");\n    }\n\n    // mqtt.retain.topics\n    if (typeof config.mqtt.retain.topics !== 'object') {\n        config.mqtt.retain.topics = defaultConfig.mqtt.retain.topics;\n        node.log(\"mqtt.retain.topics is not an object, setting default configuration.\");\n    }\n\n    // mqtt.retain.topics.config\n    boolean_value = \"config\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.config\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // mqtt.retain.topics.state\n    boolean_value = \"state\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.state\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // mqtt.retain.topics.command\n    boolean_value = \"command\";\n    if (config.mqtt.retain.topics[boolean_value] === undefined) {\n        config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n        node.log(`mqtt.retain.topics.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // mqtt.retain.topics.command\n    if (typeof config.mqtt.retain.topics[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.mqtt.retain.topics[boolean_value]);\n        if (test_boolean !== null) {\n            config.mqtt.retain.topics[boolean_value] = test_boolean;\n        } else {\n            config.mqtt.retain.topics[boolean_value] = defaultConfig.mqtt.retain.topics[boolean_value];\n            node.log(`mqtt.retain.topics.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices\n    if (typeof config.devices !== 'object') {\n        config.devices = defaultConfig.devices;\n        node.log(\"devices is not an object, setting default configuration.\");\n    }\n\n    // devices.naming\n    if (config.devices.naming === undefined) {\n        config.devices.naming = defaultConfig.devices.naming;\n        node.log(\"devices.naming is undefined, setting default configuration.\");\n    }\n\n    // devices.naming\n    if (typeof config.devices.naming !== 'string') {\n        config.devices.naming = defaultConfig.devices.naming;\n        node.log(\"devices.naming is not an String, setting default configuration.\");\n    }\n\n    // devices.set_object_id\n    boolean_value = \"set_object_id\";\n    if (config.devices[boolean_value] === undefined) {\n        config.devices[boolean_value] = defaultConfig.devices[boolean_value];\n        node.log(`config.devices.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    // devices.set_object_id\n    if (typeof config.devices[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.devices[boolean_value]);\n        if (test_boolean !== null) {\n            config.devices[boolean_value] = test_boolean;\n        } else {\n            config.devices[boolean_value] = defaultConfig.devices[boolean_value];\n            node.log(`config.devices.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype\n    if (typeof config.devices.subtype !== 'object') {\n        config.devices.subtype = defaultConfig.devices.subtype;\n        node.log(\"devices.subtype is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.cover\n    if (typeof config.devices.subtype.cover !== 'object') {\n        config.devices.subtype.cover = defaultConfig.devices.subtype.cover;\n        node.log(\"devices.subtype.cover is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.cover.toggle_stop_time\n    if (!config.devices.subtype.cover.toggle_stop_time) {\n        config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n        node.log(\"devices.subtype.cover.toggle_stop_time not found, setting default configuration.\");\n    }\n\n    // devices.subtype.cover.toggle_stop_time - isInteger\n    if (!Number.isInteger(config.devices.subtype.cover.toggle_stop_time)) {\n\n        let value = parseInt(config.devices.subtype.cover.toggle_stop_time);\n        if (!isNaN(value)) {\n            config.devices.subtype.cover.toggle_stop_time = value;\n        } else {\n            config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n            node.log(`devices.subtype.cover.toggle_stop_time is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype.cover.toggle_stop_time - isInRange\n    if (!isInRange(config.devices.subtype.cover.toggle_stop_time, MIN_STOP_TIME, MAX_STOP_TIME)) {\n        config.devices.subtype.cover.toggle_stop_time = defaultConfig.devices.subtype.cover.toggle_stop_time;\n        node.log(`devices.subtype.cover.toggle_stop_time is out of range. Min = ${MIN_STOP_TIME} | Max = ${MAX_STOP_TIME}. Value was set to default configuration.`);\n    }    \n\n    // devices.subtype.motiondetector\n    if (typeof config.devices.subtype.motiondetector !== 'object') {\n        config.devices.subtype.motiondetector = defaultConfig.devices.subtype.motiondetector;\n        node.log(\"devices.subtype.motiondetector is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after\n    if (typeof config.devices.subtype.motiondetector.reset_after !== 'object') {\n        config.devices.subtype.motiondetector.reset_after = defaultConfig.devices.subtype.motiondetector.reset_after;\n        node.log(\"devices.subtype.motiondetector.reset_after is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after.device_id    \n    if (!Array.isArray(config.devices.subtype.motiondetector.reset_after.device_id)) {\n        config.devices.subtype.motiondetector.reset_after.device_id = defaultConfig.devices.subtype.motiondetector.reset_after.device_id;\n        node.log(\"devices.subtype.motiondetector.reset_after.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - id isInteger\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.motiondetector.reset_after.device_id.splice(index, 1);\n                node.log(`motiondetector.reset_after.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value isInteger\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.value)) {\n            let value = parseInt(element.value);\n            if (!isNaN(value)) {\n                element.value = value;\n            } else {\n                node.log(`devices.subtype.motiondetector.reset_after.device_id[${index}].value ${element.value} of id ${element.id} is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n                element.value = defaultConfig.devices.subtype.motiondetector.reset_after.default_value;\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value out of range\n    config.devices.subtype.motiondetector.reset_after.device_id.forEach(function (element, index) {\n        if (!isInRange(element.value, MIN_RESET_AFTER, MAX_RESET_AFTER)) {\n            node.log(`motiondetector.reset_after.device_id[${index}].value ${element.value} of id ${element.id} is out of range. Min = ${MIN_RESET_AFTER} | Max = ${MAX_RESET_AFTER}. Value was set to default value.`);\n            element.value = defaultConfig.devices.subtype.motiondetector.reset_after.default_value;\n        }\n    });\n\n    // devices.subtype.electricitymeter\n    if (typeof config.devices.subtype.electricitymeter !== 'object') {\n        config.devices.subtype.electricitymeter = defaultConfig.devices.subtype.electricitymeter;\n        node.log(\"devices.subtype.electricitymeter is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker\n    if (typeof config.devices.subtype.electricitymeter.ecotracker !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker = defaultConfig.devices.subtype.electricitymeter.ecotracker;\n        node.log(\"devices.subtype.electricitymeter.ecotracker is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker)) {\n        config.devices.subtype.electricitymeter.ecotracker = defaultConfig.devices.subtype.electricitymeter.ecotracker;\n        node.log(\"devices.subtype.electricitymeter.ecotracker is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.activated !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api.activated)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id\n    if (!Array.isArray(config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id  - Array - id isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.splice(index, 1);\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id  - Array - value not valid boolean\n    config.devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id.forEach(function (element, index) {\n        if (typeof element.value !== 'boolean') {\n            const test_boolean = convertToBoolean(element.value);\n            if (test_boolean !== null) {\n                element.value = test_boolean;\n            } else {\n                element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated.default_value;\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.device_id[${index}].value is not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n            }\n        }\n    });\n\n    // mqtt.retain.topics.config\n    boolean_value = \"default_value\";\n    if (config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] === undefined) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value];\n        node.log(`config.devices.subtype.electricitymeter.ecotracker.local_api.activated.${boolean_value} is undefined, setting default configuration.`);\n    }\n\n    boolean_value = \"default_value\";\n    // devices.subtype.electricitymeter.ecotracker.local_api.activated.default_value\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] !== 'boolean') {\n        const test_boolean = convertToBoolean(config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value]);\n        if (test_boolean !== null) {\n            config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = test_boolean;\n        } else {\n            config.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value] = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.activated[boolean_value];\n            node.log(`devices.subtype.electricitymeter.ecotracker.local_api.activated.${boolean_value} not valid boolean value (allowed: true/false | \"true\"/\"false\" | 1/0), setting default configuration.`);\n        }\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval\n    if (typeof config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval !== 'object') {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval is not an object, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval\n    if (isEmptyObject(config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval is empty, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id\n    if (!Array.isArray(config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id)) {\n        config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id;\n        node.log(\"devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id is not an array, setting default configuration.\");\n    }\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id  - Array - id isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.id)) {\n            let value = parseInt(element.id);\n            if (!isNaN(value)) {\n                element.id = value;\n            } else {\n                config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.splice(index, 1);\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].id ${element.id} is not an Integer(allowed example: 10 | \"10\" | \"10abc\"), Index has been removed from the configuration.`);\n            }\n        }\n    });\n\n    // devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id  - Array - value isInteger\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!Number.isInteger(element.value)) {\n            let value = parseInt(element.value);\n            if (!isNaN(value)) {\n                element.value = value;\n            } else {\n                node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].value ${element.value} of id ${element.id} is not Integer (allowed example: 10 | \"10\" | \"10abc\"), setting default configuration.`);\n                element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.default_value;\n            }\n        }\n    });\n\n    // devices.subtype.motiondetector.reset_after.device_id  - Array - value out of range\n    config.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id.forEach(function (element, index) {\n        if (!isInRange(element.value, MIN_SCAN_INTERVAL, MAX_SCAN_INTERVAL)) {\n            node.log(`devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.device_id[${index}].value ${element.value} of id ${element.id} is out of range. Min = ${MIN_SCAN_INTERVAL} | Max = ${MAX_SCAN_INTERVAL}. Value was set to default value.`);\n            element.value = defaultConfig.devices.subtype.electricitymeter.ecotracker.local_api.scan_interval.default_value;\n        }\n    });\n\n    // devices.exclude   \n    if (!Array.isArray(config.devices.exclude)) {\n        config.devices.exclude = [];\n        node.log(\"devices.exclude is not an array, setting empty configuration.\");\n    }\n\n    return config;\n}\n\nconst config_input = msg.payload;\nconst config_input_stringify = (JSON.stringify(config_input));\n\nconst defaultConfig = global.get(\"defaultConfig\");\nconst config_output = validateYAML(config_input, defaultConfig);\nconst config_output_stringify = (JSON.stringify(config_input));\n\nif (config_input_stringify === config_output_stringify) {\n    msg.config_changed = false;\n    //node.log(\"The Configuration has not been changed.\");\n} else {\n    msg.config_changed = true;\n    node.log(\"The Configuration has been changed.\");\n}\n\nmsg.payload = config_output;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5244,7 +5291,7 @@
         "finalize": "",
         "libs": [],
         "x": 1280,
-        "y": 300,
+        "y": 460,
         "wires": [
             [
                 "1f370df7dded8d0d",
@@ -5268,7 +5315,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1510,
-        "y": 360,
+        "y": 520,
         "wires": []
     },
     {
@@ -5381,7 +5428,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "default config",
-        "func": "let defaultConfig = {\n    language: \"de\", \n    ports: {\n        everHome2MQTT: 3000, \n        nodeRed: 1880 \n    },\n    websocket: {\n        scan_interval: 10\n    },\n    mqtt: {\n        scan_interval: 10,\n        retain: {\n            topics: {\n                config: true,\n                state: true,\n                command: false\n            }\n        }\n    },\n    devices: {\n        naming: \"<device_name> <room_name>\",\n        set_object_id: true,\n        subtype: {\n            cover: {\n                toggle_stop_time: 20\n            },\n            motiondetector: {\n                reset_after: {\n                    device_id: [\n                        { id: 0, value: 120 }\n                    ],\n                    default_value: 120\n                }\n            },\n            electricitymeter: {\n                ecotracker: {\n                    local_api: {\n                        activated: {\n                            device_id: [\n                                { id: 0, value: true }\n                            ],\n                            default_value: false\n                        },\n                        scan_interval: {\n                            device_id: [\n                                { id: 0, value: 5 }\n                            ],\n                            default_value: 5\n                        }\n                    }\n                }\n            }\n        },\n        exclude: [\n            { subtype: \"mobile\" }\n        ]\n    }\n};\nglobal.set(\"defaultConfig\", defaultConfig);\nreturn msg;",
+        "func": "let defaultConfig = {\n    language: \"de\", \n    ports: {\n        everHome2MQTT: 3000, \n        nodeRed: 1880 \n    },\n    websocket: {\n        scan_interval: 10\n    },\n    node_red: {\n        scan_interval: 10\n    },    \n    mqtt: {\n        scan_interval: 10,\n        retain: {\n            topics: {\n                config: true,\n                state: true,\n                command: false\n            }\n        }\n    },\n    devices: {\n        naming: \"<device_name> <room_name>\",\n        set_object_id: true,\n        subtype: {\n            cover: {\n                toggle_stop_time: 20\n            },\n            motiondetector: {\n                reset_after: {\n                    device_id: [\n                        { id: 0, value: 120 }\n                    ],\n                    default_value: 120\n                }\n            },\n            electricitymeter: {\n                ecotracker: {\n                    local_api: {\n                        activated: {\n                            device_id: [\n                                { id: 0, value: true }\n                            ],\n                            default_value: false\n                        },\n                        scan_interval: {\n                            device_id: [\n                                { id: 0, value: 5 }\n                            ],\n                            default_value: 5\n                        }\n                    }\n                }\n            }\n        },\n        exclude: [\n            { subtype: \"mobile\" }\n        ]\n    }\n};\nglobal.set(\"defaultConfig\", defaultConfig);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5425,7 +5472,7 @@
         "property": "payload",
         "name": "",
         "x": 1650,
-        "y": 200,
+        "y": 360,
         "wires": [
             [
                 "8e544892bb2bc628"
@@ -5445,7 +5492,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 1920,
-        "y": 200,
+        "y": 360,
         "wires": [
             []
         ]
@@ -5467,7 +5514,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1480,
-        "y": 200,
+        "y": 360,
         "wires": [
             [
                 "9fefe8e3edd4c70c"
@@ -5903,6 +5950,251 @@
         ]
     },
     {
+        "id": "acd9a00f84e2516e",
+        "type": "http request",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "http",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1310,
+        "y": 160,
+        "wires": [
+            [
+                "308e63a0926e75ec"
+            ]
+        ]
+    },
+    {
+        "id": "ecaf3587b5a7352c",
+        "type": "debug",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1990,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "91bff053ed5b756d",
+        "type": "http request",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "https",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1610,
+        "y": 240,
+        "wires": [
+            [
+                "efc86a103f0edc27"
+            ]
+        ]
+    },
+    {
+        "id": "7c35215a29881d73",
+        "type": "debug",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "308e63a0926e75ec",
+        "type": "switch",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1470,
+        "y": 160,
+        "wires": [
+            [
+                "a3f3867951066f75"
+            ],
+            [
+                "a6932a482c8474c8"
+            ]
+        ]
+    },
+    {
+        "id": "efc86a103f0edc27",
+        "type": "change",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "node_red_url_protocol",
+                "pt": "global",
+                "to": "https://",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1840,
+        "y": 240,
+        "wires": [
+            [
+                "7c35215a29881d73"
+            ]
+        ]
+    },
+    {
+        "id": "a3f3867951066f75",
+        "type": "change",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "node_red_url_protocol",
+                "pt": "global",
+                "to": "http://",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1740,
+        "y": 160,
+        "wires": [
+            [
+                "ecaf3587b5a7352c"
+            ]
+        ]
+    },
+    {
+        "id": "cafa420a23c4aa30",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "http url",
+        "func": "const configuration = global.get('configuration');\n\nconst host = \"localhost\";\nconst port = configuration.ports.nodeRed;\nconst endpoint = \"endpoint/alive\";\n\nlet url = `http://${host}:${port}/${endpoint}`;\n\nmsg = {};\nmsg.url = url;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 160,
+        "wires": [
+            [
+                "acd9a00f84e2516e"
+            ]
+        ]
+    },
+    {
+        "id": "a6932a482c8474c8",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "https url",
+        "func": "const configuration = global.get('configuration');\n\nconst host = \"localhost\";\nconst port = configuration.ports.nodeRed;\nconst endpoint = \"endpoint/alive\";\n\nlet url = `https://${host}:${port}/${endpoint}`;\n\nmsg = {};\nmsg.rejectUnauthorized = false;\nmsg.url = url;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 240,
+        "wires": [
+            [
+                "91bff053ed5b756d"
+            ]
+        ]
+    },
+    {
+        "id": "89fe6463d017eb51",
+        "type": "link out",
+        "z": "cf02ad9c7e091fb3",
+        "name": "link out - Get Node-RED Url Protocol",
+        "mode": "link",
+        "links": [
+            "76b4fb2e25efad9b"
+        ],
+        "x": 1775,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "76b4fb2e25efad9b",
+        "type": "link in",
+        "z": "cf02ad9c7e091fb3",
+        "name": "link in - Get Node-RED Url Protocol",
+        "links": [
+            "89fe6463d017eb51"
+        ],
+        "x": 1085,
+        "y": 160,
+        "wires": [
+            [
+                "cafa420a23c4aa30"
+            ]
+        ]
+    },
+    {
         "id": "a6dfbbf3121bfa9b",
         "type": "http request",
         "z": "882084c144462778",
@@ -5935,7 +6227,7 @@
         "z": "882084c144462778",
         "g": "7092612d54be0bf4",
         "name": "Subscripe ws topic",
-        "func": "const configuration = global.get('configuration');\nconst ip = global.get(\"internalIPvX\");\nconst port_node_red = configuration.ports.nodeRed;\n\nlet token = global.get('accessToken');\n\nlet ws_url = \"everhome.cloud/websocket\";\nlet postback_url = `http://${ip}:${port_node_red}/endpoint/wsdata`;\nlet payload =\n{\n    \"ws_url\": ws_url,\n    \"postback_url\": postback_url,\n    \"ip_node-red\": ip,\n    \"token\": token,\n    \"method\": \"subscribe\",\n    \"topics\": [\n        \"device/*/name,roomid,subtype,favorite,states,imageurl,isnow,plancounts,actions,ts\",\n        \"room/*/name,override,states\",\n        \"group/*/name,favorite,states\",\n        \"log\",\n        \"home/*/name,presence\"\n    ]\n}\n\n\nconst port_everHome2MQTT = configuration.ports.everHome2MQTT;\n\nmsg = {};\nmsg.requestTimeout = 5000;\nmsg.url = `http://${ip}:${port_everHome2MQTT}/ws`;\nmsg.payload = payload;\nreturn msg;",
+        "func": "const configuration = global.get('configuration');\nconst ip = global.get(\"internalIPvX\");\nconst port_node_red = configuration.ports.nodeRed;\nconst node_red_url_protocol = global.get('node_red_url_protocol');\n\n\nlet token = global.get('accessToken');\n\nlet ws_url = \"everhome.cloud/websocket\";\nlet postback_url = `${node_red_url_protocol}${ip}:${port_node_red}/endpoint/wsdata`;\nlet payload =\n{\n    \"ws_url\": ws_url,\n    \"postback_url\": postback_url,\n    \"ip_node-red\": ip,\n    \"token\": token,\n    \"method\": \"subscribe\",\n    \"topics\": [\n        \"device/*/name,roomid,subtype,favorite,states,imageurl,isnow,plancounts,actions,ts\",\n        \"room/*/name,override,states\",\n        \"group/*/name,favorite,states\",\n        \"log\",\n        \"home/*/name,presence\"\n    ]\n}\n\n\nconst port_everHome2MQTT = configuration.ports.everHome2MQTT;\n\nmsg = {};\nmsg.requestTimeout = 5000;\nmsg.url = `http://${ip}:${port_everHome2MQTT}/ws`;\nmsg.payload = payload;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6065,7 +6357,7 @@
         "z": "882084c144462778",
         "g": "714ee53a3861c61a",
         "name": "global.set:internalIPvX + restart_url",
-        "func": "const configuration = global.get('configuration');\nconst port_everHome2MQTT = configuration.ports.everHome2MQTT;\nconst port_node_red = configuration.ports.nodeRed;\n\n\nlet ip;\nif (msg.payload.internalIPv4 !== undefined) {\n    ip = msg.payload.internalIPv4;\n}\nelse if (msg.payload.internalIPv6 !== undefined) {\n    ip = msg.payload.internalIPv6;\n}\nelse {\n    ip = \"no IP addresses were found\";\n}\n\nconst restart_url = `http://${ip}:${port_node_red}/endpoint/restart`;\n\nmsg.append = `${restart_url} ${port_everHome2MQTT}`;\n\nglobal.set(\"internalIPvX\", ip);\nreturn msg;",
+        "func": "const configuration = global.get('configuration');\nconst port_everHome2MQTT = configuration.ports.everHome2MQTT;\nconst port_node_red = configuration.ports.nodeRed;\nconst node_red_url_protocol = global.get('node_red_url_protocol');\n\n\nlet ip;\nif (msg.payload.internalIPv4 !== undefined) {\n    ip = msg.payload.internalIPv4;\n}\nelse if (msg.payload.internalIPv6 !== undefined) {\n    ip = msg.payload.internalIPv6;\n}\nelse {\n    ip = \"no IP addresses were found\";\n}\n\nconst restart_url = `${node_red_url_protocol}${ip}:${port_node_red}/endpoint/restart`;\nconst alive_url = `${node_red_url_protocol}${ip}:${port_node_red}/endpoint/alive`;\n\nmsg.append = `${restart_url} ${alive_url} ${port_everHome2MQTT}`;\n\nglobal.set(\"internalIPvX\", ip);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6577,7 +6869,8 @@
         "name": "link out 3",
         "mode": "link",
         "links": [
-            "d49769c6a79c5c96"
+            "d49769c6a79c5c96",
+            "5399190e70ec39c9"
         ],
         "x": 2365,
         "y": 120,
@@ -7115,7 +7408,7 @@
         "finalize": "",
         "libs": [],
         "x": 1020,
-        "y": 400,
+        "y": 460,
         "wires": [
             [
                 "2c9e7c2c2e2a0e16",
@@ -7137,7 +7430,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 400,
+        "y": 460,
         "wires": [
             [
                 "3fe7f96c15ee6699"
@@ -7158,7 +7451,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "07ccf8bc620e2eb5",
@@ -7180,7 +7473,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "4c666029cb05a518"
@@ -7357,8 +7650,8 @@
         "y": 220,
         "wires": [
             [
-                "098dd18a510b4a34",
-                "07ccf8bc620e2eb5"
+                "07ccf8bc620e2eb5",
+                "4b604223e0ec2a54"
             ]
         ]
     },
@@ -7702,7 +7995,7 @@
         "finalize": "",
         "libs": [],
         "x": 1400,
-        "y": 420,
+        "y": 480,
         "wires": [
             [
                 "0487a6ea15b08097"
@@ -8286,7 +8579,7 @@
             "e79bcad893f668ca"
         ],
         "x": 1575,
-        "y": 420,
+        "y": 480,
         "wires": []
     },
     {
@@ -8839,7 +9132,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 340,
+        "y": 400,
         "wires": [
             [
                 "a87d899f6a0ff312"
@@ -8860,7 +9153,7 @@
         "finalize": "",
         "libs": [],
         "x": 970,
-        "y": 340,
+        "y": 400,
         "wires": [
             [
                 "1ea03c0fdb17c030",
@@ -8971,7 +9264,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "ac44dc4abe0f30d8"
@@ -8992,7 +9285,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "375d7b191f27a57a"
@@ -9009,7 +9302,7 @@
             "4de184e3416236e9"
         ],
         "x": 545,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "a1323e6c688d9be6"
@@ -9030,7 +9323,7 @@
         "finalize": "",
         "libs": [],
         "x": 1200,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "d0c1f06a67fd9c3b"
@@ -9053,7 +9346,7 @@
         "expiry": "",
         "broker": "010c8dcccc60a718",
         "x": 1390,
-        "y": 520,
+        "y": 580,
         "wires": []
     },
     {
@@ -9075,8 +9368,51 @@
         "name": "Adaptive configuration",
         "info": "",
         "x": 700,
-        "y": 460,
+        "y": 520,
         "wires": []
+    },
+    {
+        "id": "4b604223e0ec2a54",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "config topic",
+        "func": "// uniq_id\nlet uniq_id = msg.central.uniq_id + \"_\" + \"node_red_state_connected\";\nmsg.uniq_id = uniq_id;\n\n// <discovery_prefix>/<component>/[<node_id>/]<object_id>/config\nlet discovery_prefix = 'homeassistant';\nlet component = 'binary_sensor';\nlet node_id = 'everhome';\n\nlet prefix = 'config';\nlet topic = discovery_prefix + '/' + component + '/' + node_id + '/' + uniq_id + '/' + prefix;\nmsg.topic = topic;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "6f3b9e4c77d8097e"
+            ]
+        ]
+    },
+    {
+        "id": "6f3b9e4c77d8097e",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "12555d2026f2b1f7",
+        "name": "Node-RED diagnostic",
+        "func": "function joinTopics(...topics) {\n    return topics.join('/');\n}\n\nconst uniq_id = msg.uniq_id;\nconst obj_id = uniq_id;\nconst central_device_id = \"everhome_central\";\nconst device_name = msg.central.device_name;\nconst name = \"Node-RED\";\n\nlet payload = {\n    \"uniq_id\": uniq_id,\n    \"obj_id\": uniq_id,\n    \"stat_t\": \"everhome/central/state_connected/node_red\",\n    \"name\": name,\n    \"pl_on\": \"online\",\n    \"pl_off\": \"offline\",\n    \"stat_cla\": \"measurement\",\n    \"dev_cla\": \"connectivity\",\n    \"ent_cat\": \"diagnostic\",\n    \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`,\n    \"dev\": {\n        \"ids\": [\n            central_device_id\n        ]\n    },\n    \"avty\": [\n        {\n            \"t\": \"everhome/central/state_connected/mqtt\",\n            \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n        }\n    ],\n    \"avty_mode\": \"all\"\n};\n\nmsg.payload = payload;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 280,
+        "wires": [
+            [
+                "098dd18a510b4a34",
+                "07ccf8bc620e2eb5"
+            ]
+        ]
     },
     {
         "id": "58dfceae4a681e65",
@@ -11465,7 +11801,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 220,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "8c75bdc3c30c3336",
@@ -11483,7 +11819,7 @@
         "name": "Receive Data",
         "info": "",
         "x": 150,
-        "y": 1460,
+        "y": 1880,
         "wires": []
     },
     {
@@ -11500,7 +11836,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 1480,
+        "y": 1900,
         "wires": [
             [
                 "bdcb145ad347384d"
@@ -11521,7 +11857,7 @@
         "finalize": "",
         "libs": [],
         "x": 2010,
-        "y": 1700,
+        "y": 2120,
         "wires": [
             [
                 "996b829ffe4fdf19"
@@ -11544,7 +11880,7 @@
         "expiry": "",
         "broker": "010c8dcccc60a718",
         "x": 2190,
-        "y": 1680,
+        "y": 2100,
         "wires": []
     },
     {
@@ -11561,7 +11897,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 1540,
+        "y": 1960,
         "wires": [
             [
                 "90e5a490195a0609"
@@ -11582,7 +11918,7 @@
         "finalize": "",
         "libs": [],
         "x": 760,
-        "y": 1640,
+        "y": 2060,
         "wires": [
             [
                 "076935f96467b2c7"
@@ -11609,7 +11945,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1440,
-        "y": 1640,
+        "y": 2060,
         "wires": [
             [
                 "7f0d015d64c1d532"
@@ -11633,7 +11969,7 @@
         "finalize": "",
         "libs": [],
         "x": 1620,
-        "y": 1600,
+        "y": 2020,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -11654,7 +11990,7 @@
         "finalize": "",
         "libs": [],
         "x": 1620,
-        "y": 1680,
+        "y": 2100,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -11675,7 +12011,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 1720,
+        "y": 2140,
         "wires": [
             [
                 "8502b8640b5d2af5"
@@ -11696,7 +12032,7 @@
         "finalize": "",
         "libs": [],
         "x": 250,
-        "y": 1620,
+        "y": 2040,
         "wires": [
             [
                 "5595786919a3e4b5"
@@ -11717,7 +12053,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1960,
+        "y": 2380,
         "wires": [
             [
                 "6eb6e455079f25ae"
@@ -11734,7 +12070,7 @@
             "c3d6f0bb540b7bac"
         ],
         "x": 95,
-        "y": 1620,
+        "y": 2040,
         "wires": [
             [
                 "e0e7e5ba5ee98eb0"
@@ -11755,7 +12091,7 @@
         "finalize": "",
         "libs": [],
         "x": 530,
-        "y": 1660,
+        "y": 2080,
         "wires": [
             [
                 "2480f246336f4f3d",
@@ -11787,7 +12123,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 1560,
+        "y": 1980,
         "wires": [
             [
                 "5595786919a3e4b5"
@@ -11804,7 +12140,7 @@
             "925645361fbf56a1"
         ],
         "x": 95,
-        "y": 1560,
+        "y": 1980,
         "wires": [
             [
                 "f0729a5cee4bb8bb"
@@ -11825,7 +12161,7 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 2400,
+        "y": 2820,
         "wires": [
             [
                 "260ed86cca47c42c",
@@ -11848,7 +12184,7 @@
         "finalize": "",
         "libs": [],
         "x": 1610,
-        "y": 2460,
+        "y": 2880,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -11869,7 +12205,7 @@
         "finalize": "",
         "libs": [],
         "x": 270,
-        "y": 2400,
+        "y": 2820,
         "wires": [
             [
                 "8c75bdc3c30c3336",
@@ -11887,7 +12223,7 @@
             "aeb87f3ae70b534d"
         ],
         "x": 95,
-        "y": 2400,
+        "y": 2820,
         "wires": [
             [
                 "55cf220d67e79297",
@@ -11909,7 +12245,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2460,
+        "y": 2880,
         "wires": [
             [
                 "5b2c186f1063ab21"
@@ -11925,7 +12261,7 @@
         "statusCode": "200",
         "headers": {},
         "x": 500,
-        "y": 1800,
+        "y": 2220,
         "wires": []
     },
     {
@@ -11942,7 +12278,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 2400,
+        "y": 2820,
         "wires": [
             [
                 "807d841973018fb8"
@@ -11964,7 +12300,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 230,
-        "y": 2460,
+        "y": 2880,
         "wires": []
     },
     {
@@ -11982,7 +12318,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 730,
-        "y": 2520,
+        "y": 2940,
         "wires": []
     },
     {
@@ -12000,7 +12336,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 470,
-        "y": 2480,
+        "y": 2900,
         "wires": []
     },
     {
@@ -12140,7 +12476,7 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2200,
+        "y": 2620,
         "wires": [
             [
                 "59fae3a613178a6b"
@@ -12161,7 +12497,7 @@
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 1720,
+        "y": 2140,
         "wires": [
             [
                 "ac3e4c8bebde7fb2"
@@ -12182,7 +12518,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 2020,
+        "y": 2440,
         "wires": [
             [
                 "b0acf82f76e764e5"
@@ -12203,7 +12539,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 2080,
+        "y": 2500,
         "wires": [
             [
                 "61770934f35e7b7f"
@@ -12224,7 +12560,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 2140,
+        "y": 2560,
         "wires": [
             [
                 "22e7b58ba0bc15dc"
@@ -12263,7 +12599,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "ae6de7d697172d30",
@@ -12288,7 +12624,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1020,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "3cb99a7fcedd5fcc"
@@ -12309,7 +12645,7 @@
         "finalize": "",
         "libs": [],
         "x": 1630,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "29eebf99226b1b21"
@@ -12330,7 +12666,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 1860,
+        "y": 2280,
         "wires": [
             [
                 "667d2a270b70eb62"
@@ -12351,7 +12687,7 @@
         "finalize": "",
         "libs": [],
         "x": 1350,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "a1c2eca6313258b5"
@@ -12377,7 +12713,7 @@
         "topic": "ws_message.id",
         "outputs": 1,
         "x": 1480,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "93bdfcd35b3dd9d4"
@@ -12398,7 +12734,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "c91905f470e8fe47"
@@ -12416,7 +12752,7 @@
             "803e584dbbb5efb4"
         ],
         "x": 1405,
-        "y": 2780,
+        "y": 3200,
         "wires": []
     },
     {
@@ -12439,7 +12775,7 @@
         "repair": false,
         "outputs": 2,
         "x": 810,
-        "y": 2760,
+        "y": 3180,
         "wires": [
             [
                 "389712dfddf9a7c0"
@@ -12458,7 +12794,7 @@
         "name": "Ecotacker - Local Api",
         "info": "",
         "x": 180,
-        "y": 2640,
+        "y": 3060,
         "wires": []
     },
     {
@@ -12475,7 +12811,7 @@
         "finalize": "",
         "libs": [],
         "x": 1120,
-        "y": 2720,
+        "y": 3140,
         "wires": [
             [
                 "0e06acf8e5ede672",
@@ -12498,7 +12834,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1530,
-        "y": 2720,
+        "y": 3140,
         "wires": []
     },
     {
@@ -12515,7 +12851,7 @@
         "finalize": "",
         "libs": [],
         "x": 200,
-        "y": 2760,
+        "y": 3180,
         "wires": [
             [
                 "20e3408ebf990256"
@@ -12529,7 +12865,7 @@
         "g": "efb062bb1a7b2ea6",
         "name": "",
         "x": 1210,
-        "y": 2840,
+        "y": 3260,
         "wires": [
             [
                 "1d6f05aaee4b7d81",
@@ -12552,7 +12888,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1530,
-        "y": 2840,
+        "y": 3260,
         "wires": []
     },
     {
@@ -12570,7 +12906,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 2780,
+        "y": 3200,
         "wires": []
     },
     {
@@ -12587,7 +12923,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 2760,
+        "y": 3180,
         "wires": [
             [
                 "2a646f8c2f29fdf8"
@@ -12608,7 +12944,7 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 2760,
+        "y": 3180,
         "wires": [
             [
                 "cdd112e8570c6712"
@@ -12684,7 +13020,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 270,
-        "y": 2840,
+        "y": 3260,
         "wires": [
             [
                 "a1e5af14f5b0a35f"
@@ -12711,7 +13047,7 @@
         "repair": false,
         "outputs": 2,
         "x": 480,
-        "y": 2840,
+        "y": 3260,
         "wires": [
             [
                 "40d81977fae4b9d7"
@@ -12740,7 +13076,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 670,
-        "y": 2840,
+        "y": 3260,
         "wires": [
             [
                 "a1e5af14f5b0a35f"
@@ -12755,7 +13091,7 @@
         "name": "Prüfen aktualisieren",
         "info": "",
         "x": 810,
-        "y": 2700,
+        "y": 3120,
         "wires": []
     },
     {
@@ -12772,7 +13108,7 @@
         "property": "element.id",
         "topi": "element.id",
         "x": 1010,
-        "y": 2840,
+        "y": 3260,
         "wires": [
             [
                 "ee93397850e8d2c1"
@@ -12793,7 +13129,7 @@
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 1960,
+        "y": 2380,
         "wires": [
             [
                 "9f0e7c22c031e6b0"
@@ -12811,7 +13147,7 @@
             "cfd6aa51252ed91a"
         ],
         "x": 595,
-        "y": 1880,
+        "y": 2300,
         "wires": []
     },
     {
@@ -12824,7 +13160,7 @@
             "9f0e7c22c031e6b0"
         ],
         "x": 105,
-        "y": 3060,
+        "y": 3480,
         "wires": [
             [
                 "137717810da4ac61",
@@ -12846,7 +13182,7 @@
         "finalize": "",
         "libs": [],
         "x": 480,
-        "y": 3020,
+        "y": 3440,
         "wires": [
             [
                 "87fd9da7cef3c964"
@@ -12867,7 +13203,7 @@
         "finalize": "",
         "libs": [],
         "x": 690,
-        "y": 3060,
+        "y": 3480,
         "wires": [
             [
                 "3674ca12408e492a",
@@ -12891,7 +13227,7 @@
         "expiry": "",
         "broker": "010c8dcccc60a718",
         "x": 930,
-        "y": 3020,
+        "y": 3440,
         "wires": []
     },
     {
@@ -12909,7 +13245,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 930,
-        "y": 3100,
+        "y": 3520,
         "wires": []
     },
     {
@@ -12926,7 +13262,7 @@
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 3100,
+        "y": 3520,
         "wires": [
             [
                 "87fd9da7cef3c964"
@@ -12941,7 +13277,7 @@
         "name": "Get Data from Logs",
         "info": "",
         "x": 170,
-        "y": 2960,
+        "y": 3380,
         "wires": []
     },
     {
@@ -12952,7 +13288,7 @@
         "name": "action",
         "info": "",
         "x": 450,
-        "y": 3060,
+        "y": 3480,
         "wires": []
     },
     {
@@ -13025,7 +13361,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 1720,
+        "y": 2140,
         "wires": [
             [
                 "5595786919a3e4b5"
@@ -13046,10 +13382,280 @@
         "finalize": "",
         "libs": [],
         "x": 740,
-        "y": 2260,
+        "y": 2680,
         "wires": [
             [
                 "ebdaf1719065aaba"
+            ]
+        ]
+    },
+    {
+        "id": "f7bb205fc99c130e",
+        "type": "http in",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "url": "alive",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1500,
+        "wires": [
+            [
+                "72db2b250d52b87f",
+                "37993cef1f4846d8"
+            ]
+        ]
+    },
+    {
+        "id": "72db2b250d52b87f",
+        "type": "http response",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 460,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "37993cef1f4846d8",
+        "type": "debug",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "57b4d8fc128d561b",
+        "type": "debug",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "0b455ee3e50e3607",
+        "type": "function",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "check statusCode",
+        "func": "if (msg.statusCode === 200){\n    msg.payload =\"online\";\n}else{\n    msg.payload =\"offline\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1760,
+        "wires": [
+            [
+                "57b4d8fc128d561b",
+                "eaf2688496004d63"
+            ]
+        ]
+    },
+    {
+        "id": "34c0d6fc8c8aa911",
+        "type": "function",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "generate url",
+        "func": "const configuration = global.get('configuration');\nconst ip = global.get(\"internalIPvX\");\nconst port = configuration.ports.everHome2MQTT;\n\nlet alive_url = `http://${ip}:${port}/alive`;\n\nmsg = {};\nmsg.url = alive_url;\nmsg.requestTimeout = 1000;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1760,
+        "wires": [
+            [
+                "359edf4b9ed9dfaf"
+            ]
+        ]
+    },
+    {
+        "id": "359edf4b9ed9dfaf",
+        "type": "http request",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 1760,
+        "wires": [
+            [
+                "0b455ee3e50e3607",
+                "4827cd5ae68d86eb"
+            ]
+        ]
+    },
+    {
+        "id": "eaf2688496004d63",
+        "type": "function",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "topic + payload",
+        "func": "let central_state = {};\ncentral_state[\"value\"] = msg.payload;\n\nmsg.payload = central_state;\nmsg.topic = \"everhome/central/state_connected/node_red\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1520,
+        "wires": [
+            [
+                "2c360bfe90a5f324"
+            ]
+        ]
+    },
+    {
+        "id": "2c360bfe90a5f324",
+        "type": "function",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "Retain State",
+        "func": "const configuration = global.get('configuration');\nconst retain = configuration.mqtt.retain.topics.state;\n\n// \"TypeError: Cannot read properties of undefined (reading 'retain')\"\nmsg.retain = retain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1520,
+        "wires": [
+            [
+                "9936551d3a084570"
+            ]
+        ]
+    },
+    {
+        "id": "9936551d3a084570",
+        "type": "mqtt out",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "010c8dcccc60a718",
+        "x": 1530,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "45a27b5a44f3ca14",
+        "type": "delay",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 1640,
+        "wires": [
+            [
+                "34c0d6fc8c8aa911"
+            ]
+        ]
+    },
+    {
+        "id": "5399190e70ec39c9",
+        "type": "link in",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "link in - Alive Node-RED",
+        "links": [
+            "b3b32bd5417396de"
+        ],
+        "x": 155,
+        "y": 1760,
+        "wires": [
+            [
+                "34c0d6fc8c8aa911"
+            ]
+        ]
+    },
+    {
+        "id": "83467e82c3482e4d",
+        "type": "comment",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": " Connection check: everHome2MQTT server ↔ Node-RED",
+        "info": "asada",
+        "x": 290,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "4827cd5ae68d86eb",
+        "type": "function",
+        "z": "4c7024461c6c9a94",
+        "g": "ebbb4f3bee015cdb",
+        "name": "scan_interval",
+        "func": "const FACTOR = 1000;\nconst scan_interval = global.get('configuration').node_red.scan_interval;\nconst delay = scan_interval * FACTOR;\nmsg.delay = delay;\n\nreturn msg; ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1640,
+        "wires": [
+            [
+                "45a27b5a44f3ca14"
             ]
         ]
     },
