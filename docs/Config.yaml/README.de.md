@@ -28,7 +28,15 @@ Legt das Intervall in Sekunden fest, in dem die WebSocket-Verbindung überprüft
 **Maximalwert:** `60`  
 **Standardwert:** `10`
 
-## 7.4 MQTT-Einstellungen
+## 7.4 Node-RED-Einstellungen
+
+**node_red.scan_interval**  
+Legt das Intervall in Sekunden fest, in dem die Verbindung zwischen dem everHome2MQTT Server und Node-RED überprüft wird.  
+**Minimalwert:** `1`  
+**Maximalwert:** `60`  
+**Standardwert:** `10`
+
+## 7.5 MQTT-Einstellungen
 
 **mqtt.scan_interval**  
 Bestimmt das Intervall in Sekunden, in dem die MQTT-Verbindung überprüft wird.  
@@ -56,7 +64,7 @@ Das **Retain-Flag** kann für die folgenden Topic-Arten parametriert werden:
 **mqtt.retain.topics.command**  
 **Standardwert:** `false`
 
-## 7.5 Gerätekonfiguration
+## 7.6 Gerätekonfiguration
 
 **devices.naming**  
 Definiert das Namensschema für Geräte, wobei `<device_name>` und `<room_name>` durch den Gerätenamen und den Raumnamen ersetzt werden. Es wird empfohlen, immer den Geräte- und Raumnamen zu verwenden, um eine eindeutige Zuordnung der Geräte zu gewährleisten. Auf den Raumnamen kann verzichtet werden, wenn dieser bereits im Gerätenamen enthalten ist.
