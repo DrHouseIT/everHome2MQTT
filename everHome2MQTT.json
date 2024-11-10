@@ -4326,7 +4326,7 @@
         "type": "exec",
         "z": "882084c144462778",
         "g": "714ee53a3861c61a",
-        "command": "npm install simple-oauth2",
+        "command": "npm install simple-oauth2 proper-lockfile",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -4334,7 +4334,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1270,
+        "x": 1320,
         "y": 360,
         "wires": [
             [],
