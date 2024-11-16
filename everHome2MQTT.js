@@ -4,6 +4,7 @@ const {
 } = require('simple-oauth2');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const lockfile = require('proper-lockfile');
 const WebSocket = require('ws');
 const axios = require('axios');
 const https = require('https');
@@ -179,20 +180,34 @@ function writeTokenDataToFile(tokenData) {
 
 function readMessageHistoryFromFile() {
     try {
-        const data = fs.readFileSync(messageHistoryFilePath, 'utf8');
-        return JSON.parse(data);
+        if (lockfile.checkSync(messageHistoryFilePath)) {
+            console.log('File is currently being written to. Retrying in a moment...');
+            setTimeout(readMessageHistoryFromFile, 100); 
+        } else {
+            lockfile.lockSync(messageHistoryFilePath); 
+            const data = fs.readFileSync(messageHistoryFilePath, 'utf8');
+            lockfile.unlockSync(messageHistoryFilePath); 
+            return JSON.parse(data);
+        }
     } catch (error) {
-        console.error('Error reading the history data file.');
+        console.error('Error reading the history data file:', error);
         return [];
     }
 }
 
 function writeMessageHistoryToFile() {
-    fs.writeFile(messageHistoryFilePath, JSON.stringify(messageHistory), (err) => {
-        if (err) {
-            console.error('Error writing message history data to file:', err);
+    try {
+        if (lockfile.checkSync(messageHistoryFilePath)) {
+            console.log('File is currently being read from. Retrying in a moment...');
+            setTimeout(writeMessageHistoryToFile, 100); 
+        } else {
+            lockfile.lockSync(messageHistoryFilePath); 
+            fs.writeFileSync(messageHistoryFilePath, JSON.stringify(messageHistory));
+            lockfile.unlockSync(messageHistoryFilePath); 
         }
-    });
+    } catch (err) {
+        console.error('Error writing message history data to file:', err);
+    }
 }
 
 function writeWsTimesToFile(wsTimes) {
