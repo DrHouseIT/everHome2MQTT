@@ -234,7 +234,13 @@
             "efc86a103f0edc27",
             "a3f3867951066f75",
             "cafa420a23c4aa30",
-            "a6932a482c8474c8"
+            "a6932a482c8474c8",
+            "d67452a925191773",
+            "545b0b40a9a152f4",
+            "d868d4de1df0f195",
+            "9ce06559ebbcb49b",
+            "c3d539a28208ef1c",
+            "500657c8aa20862e"
         ],
         "x": 54,
         "y": 59,
@@ -1673,7 +1679,7 @@
         "type": "comment",
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
-        "name": "V2.0.8",
+        "name": "V2.0.9",
         "info": "",
         "x": 130,
         "y": 100,
@@ -1932,7 +1938,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "Init",
-        "func": "global.set(\"config\", {\n    central_done: false,\n    gateways_done: false,\n    all_other_devices_done: false,\n});\n\nglobal.set(\"init_running\", false);\nglobal.set(\"all_configs_done\",false);\n\nglobal.set(\"electricitymeter_first_init_done\", false);\nglobal.set(\"yaml_config_loaded\", false);\nglobal.set(\"tokenok\", false);\nglobal.set(\"expires_at\",new Date());\nglobal.set(\"configuration\", \"\");\nglobal.set(\"first\",false);\n\nglobal.set(\"push_counter\", 0);\nglobal.set(\"subscription_successful\", false);\nglobal.set(\"subscription_running\", false);\n\nglobal.set(\"mqtt_state\",\"offline\");\nglobal.set(\"rest_api_state\",\"offline\");\n\nglobal.set(\"last_ecotracker_local_api_heartbeat\", {});\n\nglobal.set('hvac_states', []);\n\nglobal.set(\"device_main_name\", \"everHome2MQTT\")\nglobal.set(\"sw_version\", \"V2.0.8\")\n\nreturn msg;",
+        "func": "global.set(\"config\", {\n    central_done: false,\n    gateways_done: false,\n    all_other_devices_done: false,\n});\n\nglobal.set(\"init_running\", false);\nglobal.set(\"all_configs_done\",false);\n\nglobal.set(\"electricitymeter_first_init_done\", false);\nglobal.set(\"yaml_config_loaded\", false);\nglobal.set(\"tokenok\", false);\nglobal.set(\"expires_at\",new Date());\nglobal.set(\"configuration\", \"\");\nglobal.set(\"first\",false);\n\nglobal.set(\"push_counter\", 0);\nglobal.set(\"subscription_successful\", false);\nglobal.set(\"subscription_running\", false);\n\nglobal.set(\"mqtt_state\",\"offline\");\nglobal.set(\"rest_api_state\",\"offline\");\n\nglobal.set(\"last_ecotracker_local_api_heartbeat\", {});\n\nglobal.set('hvac_states', []);\n\nglobal.set(\"device_main_name\", \"everHome2MQTT\")\nglobal.set(\"sw_version\", \"V2.0.9\")\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3483,7 +3489,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1990,
+        "x": 2050,
         "y": 160,
         "wires": []
     },
@@ -3508,7 +3514,7 @@
         "y": 240,
         "wires": [
             [
-                "efc86a103f0edc27"
+                "545b0b40a9a152f4"
             ]
         ]
     },
@@ -3545,12 +3551,17 @@
                 "vt": "str"
             },
             {
+                "t": "eq",
+                "v": "400",
+                "vt": "str"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 1470,
         "y": 160,
         "wires": [
@@ -3559,6 +3570,9 @@
             ],
             [
                 "a6932a482c8474c8"
+            ],
+            [
+                "d67452a925191773"
             ]
         ]
     },
@@ -3589,11 +3603,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1780,
+        "x": 1900,
         "y": 240,
         "wires": [
             [
-                "7c35215a29881d73"
+                "7c35215a29881d73",
+                "c3d539a28208ef1c"
             ]
         ]
     },
@@ -3624,11 +3639,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1680,
+        "x": 1900,
         "y": 160,
         "wires": [
             [
-                "ecaf3587b5a7352c"
+                "ecaf3587b5a7352c",
+                "500657c8aa20862e"
             ]
         ]
     },
@@ -3701,6 +3717,133 @@
             [
                 "cafa420a23c4aa30"
             ]
+        ]
+    },
+    {
+        "id": "d67452a925191773",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "node.warn",
+        "func": "if (msg.payload === \"Unauthorized\") {\n    node.warn(`Unauthorized access detected: Credentials for HTTP Node are currently not supported.`);\n} else {\n    node.warn(msg.payload);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "545b0b40a9a152f4",
+        "type": "switch",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1730,
+        "y": 240,
+        "wires": [
+            [
+                "efc86a103f0edc27"
+            ],
+            [
+                "d868d4de1df0f195",
+                "9ce06559ebbcb49b"
+            ]
+        ]
+    },
+    {
+        "id": "d868d4de1df0f195",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "node.warn",
+        "func": "if (msg.payload === \"Unauthorized\") {\n    node.warn(`Unauthorized access detected: Credentials for HTTP Node are currently not supported.`);\n}else{\n    node.warn(msg.payload);    \n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1890,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ce06559ebbcb49b",
+        "type": "debug",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c3d539a28208ef1c",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "node.log",
+        "func": "node.log(\"Node-RED configuration: SSL is enabled. Secure connections are now active.\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "500657c8aa20862e",
+        "type": "function",
+        "z": "cf02ad9c7e091fb3",
+        "g": "efea786323ebcbac",
+        "name": "node.log",
+        "func": "node.log(\"Node-RED configuration: SSL is disabled. Connections are now unencrypted.\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 100,
+        "wires": [
+            []
         ]
     },
     {
@@ -4424,7 +4567,7 @@
                 "t": "true"
             },
             {
-                "t": "false"
+                "t": "else"
             }
         ],
         "checkall": "true",
@@ -4942,7 +5085,7 @@
                 "t": "true"
             },
             {
-                "t": "false"
+                "t": "else"
             }
         ],
         "checkall": "true",
